@@ -131,3 +131,67 @@ footer{
     max-width: 200px;
     object-fit: cover;
 }
+.basket_item_in_line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px 16px;
+    height: 40px;
+}
+.add_reduce_amount_dish_basket{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.delete_symbol_basket{
+    color: #f08832;
+    cursor: pointer;
+    transform: scale(1);
+}
+.delete_symbol_basket:hover{
+    transform: scale(1.3);
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.amount_number_basket{
+    font-size: 16px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.add_symbol_basket{
+    height: 24px;
+    width: auto;
+    cursor: pointer;
+    transform: scale(0.95);
+}
+.add_symbol_basket:hover{
+    transform: scale(1.1);
+}
+.reduce_symbol_basket{
+    width: 24px;
+    height: 6px;
+    cursor: pointer;
+    transform: scale(0.95);
+}
+.reduce_symbol_basket:hover{
+    transform: scale(1.1);
+}
+.price_basket{
+    font-size: 16px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.title_basket{
+    text-align: center;
+    border-bottom: solid 1px #f4f4f4;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 16px 0;
+}
+.name_dish_basket{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 0 16px
+}
+

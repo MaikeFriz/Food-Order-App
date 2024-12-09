@@ -63,7 +63,7 @@ function templateDisplayMainDishes(indexMain){
         <p>${mainDishes.description}</p>
     </div>
     <div class="div_add_symbol">
-        <img class="img_add_symbol" src="./assets/imgs/add_symbol.png">
+        <img onclick="pushMainDishesTobasket(${indexMain})" class="img_add_symbol" src="./assets/imgs/add_symbol.png">
     </div>
     <img class="displayed_images_dishes" src="${mainDishes.image}">
 </div>
@@ -88,7 +88,7 @@ function templateDisplayDesserts(indexDessert){
         <p>${dessert.description}</p>
     </div>
     <div class="div_add_symbol">
-        <img class="img_add_symbol" src="./assets/imgs/add_symbol.png">
+        <img onclick ="pushDessertsTobasket(${indexDessert})" class="img_add_symbol" src="./assets/imgs/add_symbol.png">
     </div>    
     <img class="displayed_images_dishes" src="${dessert.image}">
 </div>
@@ -99,21 +99,38 @@ function renderBasket(){
     let basket = document.getElementById('display_content_basket');
     basket.innerHTML = "";
     for (let indexBasket = 0; indexBasket < myBasket.length; indexBasket++){
-        basket.innerHTML += templateDisplayBasket(myBasket[indexBasket].starter);
+        basket.innerHTML += templateDisplayBasket(myBasket[indexBasket]);
     }
 }
 
-function templateDisplayBasket(myBasket[indexBasket].starter){
+function templateDisplayBasket(dish){
     return `
-    <p>${myBasket[indexBasket].name}</p>
-    <p>${myBasket[indexBasket].price} €</p>
+<h3 class="name_dish_basket">${dish.name}</h3>
+<div class="basket_item_in_line">
+    <div class="add_reduce_amount_dish_basket">
+        <img class="reduce_symbol_basket" src="./assets/imgs/reduce_symbol_basket.png">
+        <p class="amount_number_basket">1x</p>
+        <img class="add_symbol_basket" src="./assets/imgs/add_symbol_basket.png">
+    </div>
+    <p class="price_basket">${dish.price} €</p>
+    <p class="delete_symbol_basket"><span class="material-symbols-outlined">delete</span></p>
+</div>
     `
 }
 
 function pushStartersToBasket(indexStarter){
-    myBasket.push({starter:myStarters[indexStarter]});
-    myStarters.splice(indexStarter,1);
+    myBasket.push(myStarters[indexStarter]); //ich brauche keinen Namen fuer das Objekt definieren weil das array myyStarter ja schon aus kompletten Objecten mit Namen besteht.
     renderBasket();
 }
+
+function pushMainDishesTobasket(indexMain){
+    myBasket.push(myMainDishes[indexMain]);
+    renderBasket();
+}
+
+function pushDessertsTobasket(indexDessert){
+    myBasket.push(myDesserts[indexDessert]);
+    renderBasket();
+} 
 
 
