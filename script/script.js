@@ -99,29 +99,41 @@ function renderBasket(){
     let basket = document.getElementById('display_content_basket');
     basket.innerHTML = "";
     for (let indexBasket = 0; indexBasket < myBasket.length; indexBasket++){
-        basket.innerHTML += templateDisplayBasket(myBasket[indexBasket]);
+        basket.innerHTML += templateDisplayBasket(myBasket[indexBasket], indexBasket);
     }
 }
 
-function templateDisplayBasket(dish){
+function templateDisplayBasket(dish, indexBasket){
     return `
 <h3 class="name_dish_basket">${dish.name}</h3>
 <div class="basket_item_in_line">
     <div class="add_reduce_amount_dish_basket">
-        <img class="reduce_symbol_basket" src="./assets/imgs/reduce_symbol_basket.png">
-        <p class="amount_number_basket">1x</p>
-        <img class="add_symbol_basket" src="./assets/imgs/add_symbol_basket.png">
+        <img onclick="adjustAmountItembasket(${indexBasket}, -1)" class="reduce_symbol_basket" src="./assets/imgs/reduce_symbol_basket.png">
+        <p class="amount_number_basket">${dish.amount}</p>
+        <img onclick="adjustAmountItembasket(${indexBasket}, +1)" class="add_symbol_basket" src="./assets/imgs/add_symbol_basket.png">
     </div>
     <p class="price_basket">${dish.price} €</p>
-    <p class="delete_symbol_basket"><span class="material-symbols-outlined">delete</span></p>
+    <p onclick="deleteFromBasket(${indexBasket})" class="delete_symbol_basket"><span class="material-symbols-outlined">delete</span></p>
 </div>
     `
 }
 
 function pushStartersToBasket(indexStarter){
-    myBasket.push(myStarters[indexStarter]); //ich brauche keinen Namen fuer das Objekt definieren weil das array myyStarter ja schon aus kompletten Objecten mit Namen besteht.
+    let dishBasket = myStarters[indexStarter];
+    let existingDishBasket = myBasket.find(basketDish => basketDish.name === dishBasket.name); //array.find(function(element, index(optional), array(optional)) { Bedingung })
+
+    if(existingDishBasket){
+        existingDishBasket.amount++;
+    } else{
+        myBasket.push({
+            name: dishBasket.name,
+            price: dishBasket.price,
+            amount: 1,
+        });
+    }
     renderBasket();
 }
+
 
 function pushMainDishesTobasket(indexMain){
     myBasket.push(myMainDishes[indexMain]);
@@ -132,5 +144,21 @@ function pushDessertsTobasket(indexDessert){
     myBasket.push(myDesserts[indexDessert]);
     renderBasket();
 } 
+
+function deleteFromBasket(indexBasket){
+myBasket.splice(indexBasket,1)
+renderBasket();
+console.log(indexBasket);
+}
+
+function adjustAmountItembasket(indexBasket, change){
+    let item = myBasket[indexBasket];
+    item.amount += change;
+
+    if(item.amount <= 0){ // Wenn die Anzahl auf 0 fällt, Item entfernen
+        myBasket.splice(indexBasket,1);
+    }
+    renderBasket();
+}
 
 
