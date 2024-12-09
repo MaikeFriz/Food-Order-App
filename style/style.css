@@ -1,0 +1,133 @@
+header{
+    background-color: #f08832;
+    height: 100px;
+    width: auto;
+    top: 0;
+    right: 0;
+}
+footer{
+    background-color: #f08832;
+    height: 100px;
+    width: auto;
+    bottom: 0;
+    right: 0;
+}
+.main_content{
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+}
+.main_left{
+    height: 100%;
+    width: calc(100% - 308px);
+}
+.main_right{
+    min-height: 100vh;
+    width: 308px;
+    border: grey solid 1px;
+    flex-grow: 1;
+}
+.basket{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 400px;
+}
+.aot_img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.steinofen_img{
+    border-radius: 50%;
+    border: solid 1px rgb(245, 245, 245);
+    height: 150px;
+    width: 150px;
+}
+.steinofen-img_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+}
+.starter_div{
+    height: auto;
+    max-width: 100%;
+    background-color: #f9f5f2;
+    padding: 10px;
+    cursor: pointer;
+}
+.main_dish_div{
+    height: auto;
+    max-width: 100%;
+    background-color: #f9f5f2;
+    padding: 10px;
+    cursor: pointer;
+}
+.dessert_div{
+    height: auto;
+    max-width: 100%;
+    background-color: #f9f5f2;
+    padding: 10px;
+    cursor: pointer;
+}
+.orange_arrow_img{
+    height: 50px;
+    width: auto;
+}
+.single_divs_dishes{
+    height: 140px;
+    width: 100%;
+    border-bottom: solid 1px #f4f4f4;
+    padding-left: 12px;
+}
+.display_starters{
+    height: auto;
+    width: 100%;
+}
+.title_dish{
+    color: #f08832;
+    margin-block-end: 0;
+}
+.price_dish{
+    color: grey;
+    font-size: 22px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.img_add_symbol{
+    height: 32px;
+    width: 32px;
+    border: grey solid 1px;
+    border-radius: 50%;
+    padding: 6px;
+    cursor: pointer;
+    transform: scale(0.95);
+}
+.img_add_symbol:hover{
+    transform: scale(1);
+    filter: drop-shadow(0 0 4px grey);
+    border: #f08832 solid 1px;
+}
+.div_add_symbol{
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #f08832;
+}
+.div_add_symbol p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.organise_single_dives_dishes{
+    display: flex;
+}
+.displayed_images_dishes{
+    height: 140px;
+    min-width: 200px;
+    max-width: 200px;
+    object-fit: cover;
+}

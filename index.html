@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestellapp</title>
+    <link rel="icon" type="x-icon/image" href="./assets/icons/favicon.ico">
+    <link rel="stylesheet" href="./style/standard.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="init()">
+    <header></header>
+    <div class="main_content" id="main_content">
+        <div id="main_left" class="main_left">
+            <img class="aot_img" src="./assets/imgs/aot-img.jpg" alt="Pizza">
+            <div class="steinofen-img_div">
+                <img class="steinofen_img" src="./assets/imgs/stone_oven.jpg" alt="Steinofen">
+            </div>
+            <h1>Restaurant xyz</h1>
+            <div id="display_dishes_left" class="display_dishes_left">
+                <div onclick="toggleStarterDiv()" class="starter_div">
+                    <p><img src="./assets/imgs/orange_arrows.png" class="orange_arrow_img">Vorspeisen</p>
+                </div>
+                <div id="display_starters" class="display_starters d_none"></div>
+                <div onclick="togglemainDishesDiv()" class="main_dish_div">
+                    <p><img src="./assets/imgs/orange_arrows.png" class="orange_arrow_img">Hauptgerichte</p>
+                </div>
+                <div id="display_main_dishes" class="display_main_dishes d_none"></div>
+                <div onclick="toggleDessertDiv()" class="dessert_div">
+                    <p><img src="./assets/imgs/orange_arrows.png" class="orange_arrow_img">Nachspeisen</p>
+                </div>
+                <div id="display_desserts" class="display_desserts d_none"></div>
+            </div>
+        </div>
+        <div class="main_right">
+            <div class="basket">
+                <h2>Warenkorb</h2>
+                <div id="display_content_basket" class="display_content_basket"></div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+
+    <script src="./script/db_script.js"></script>
+    <script src="./script/script.js"></script>
+    <script src="./script/template.js"></script>
+</body>
+
+</html>
+
+<img src="" alt="">
