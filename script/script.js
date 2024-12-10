@@ -98,9 +98,13 @@ function templateDisplayDesserts(indexDessert){
 function renderBasket(){
     let basket = document.getElementById('display_content_basket');
     basket.innerHTML = "";
+    if(myBasket.length === 0){
+        basket.innerHTML = `<p class="message_basket_empty"><i>Ihr Warenkorb ist leer. Fugen Sie ein Gericht hinzu.</i></p>`
+    } else {
     for (let indexBasket = 0; indexBasket < myBasket.length; indexBasket++){
         basket.innerHTML += templateDisplayBasket(myBasket[indexBasket], indexBasket);
     }
+}
 }
 
 function templateDisplayBasket(dish, indexBasket){
@@ -136,14 +140,36 @@ function pushStartersToBasket(indexStarter){
 
 
 function pushMainDishesTobasket(indexMain){
-    myBasket.push(myMainDishes[indexMain]);
-    renderBasket();
+ let dishBasket = myMainDishes[indexMain];
+ let existingDishBasket = myBasket.find(basketDish => basketDish.name === dishBasket.name);
+
+ if(existingDishBasket){
+    existingDishBasket.amount++;
+ } else {
+    myBasket.push({
+        name: dishBasket.name,
+        price: dishBasket.price,
+        amount: 1,
+    });
+}
+renderBasket();
 }
 
 function pushDessertsTobasket(indexDessert){
-    myBasket.push(myDesserts[indexDessert]);
-    renderBasket();
-} 
+    let dishBasket = myDesserts[indexDessert];
+    let existingDishBasket = myBasket.find(basketDish => basketDish.name === dishBasket.name);
+   
+    if(existingDishBasket){
+       existingDishBasket.amount++;
+    } else {
+       myBasket.push({
+           name: dishBasket.name,
+           price: dishBasket.price,
+           amount: 1,
+       });
+   }
+   renderBasket();
+   }
 
 function deleteFromBasket(indexBasket){
 myBasket.splice(indexBasket,1)

@@ -21,7 +21,7 @@ let myMainDishes = [
         "image": "./assets/imgs/spagetti.png",
     },
     {
-        "name": "vegetarische Lasagne",
+        "name": "Lasagne",
         "price": 10.99,
         "description": "Herzhafte Lasagne... .",
         "image": "./assets/imgs/lasagne.jpg",
