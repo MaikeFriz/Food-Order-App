@@ -3,6 +3,7 @@ function init() {
     renderMainDishes();
     renderDesserts();
     renderBasket();
+    renderOrdersInBasketOverlay();
 }
 
 function toggleStarterDiv() {
@@ -137,6 +138,7 @@ function pushStartersToBasket(indexStarter) {
         });
     }
     renderBasket();
+    renderOrdersInBasketOverlay()
 }
 
 
@@ -154,6 +156,7 @@ function pushMainDishesTobasket(indexMain) {
         });
     }
     renderBasket();
+    renderOrdersInBasketOverlay()
 }
 
 function pushDessertsTobasket(indexDessert) {
@@ -170,11 +173,13 @@ function pushDessertsTobasket(indexDessert) {
         });
     }
     renderBasket();
+    renderOrdersInBasketOverlay()
 }
 
 function deleteFromBasket(indexBasket) {
     myBasket.splice(indexBasket, 1)
     renderBasket();
+    renderOrdersInBasketOverlay()
     console.log(indexBasket);
 }
 
@@ -186,6 +191,7 @@ function adjustAmountItembasket(indexBasket, change) {
         myBasket.splice(indexBasket, 1);
     }
     renderBasket();
+    renderOrdersInBasketOverlay()
 }
 
 
