@@ -2,34 +2,34 @@
     {
         "name": "Pizzabrotchen",
         "price": 7.99,
-        "description": "Mit Knoblauch und Butter",
+        "description": "Frisch gebackenes, knuspriges Pizzabrot, verfeinert mit aromatischem Olivenöl und duftenden Kräutern.",
         "image": "./assets/imgs/pizza_bread.png",
     },
     {
         "name": "Salat",
         "price": 12.99,
-        "description": "Gut fur Bizeps",
+        "description": "Ein bunter, knackiger Salat aus saisonalem Gemüse, serviert mit einem hausgemachten Dressing aus feinen Kräutern und frischem Zitronensaft.",
         "image": "./assets/imgs/lettuce.jpg",
     },
 ]
 
 let myMainDishes = [
     {
-        "name": "Spagetti Traditionel",
+        "name": "Spaghetti Napoli",
         "price": 12.99,
-        "description": "Cremige Pasta mit einer Tomatensouce aus eigenem Anbau, verfeinert mit frischen Krautern aus dem Garten.",
+        "description": "Al dente gekochte Spaghetti mit einer fruchtigen Tomatensauce aus sonnengereiften Tomaten und frischen Kräutern.",
         "image": "./assets/imgs/spagetti.png",
     },
     {
         "name": "Lasagne",
         "price": 10.99,
-        "description": "Herzhafte Lasagne... .",
+        "description": "Hausgemachte Lasagne mit saftigem Gemüse, cremiger Béchamel und würziger Tomatensauce, überbacken mit feinstem Käse..",
         "image": "./assets/imgs/lasagne.jpg",
     },
     {
         "name": "Pizza Margarita",
         "price": 13.99,
-        "description": "Leckere Steinofenpizza...",
+        "description": "Klassische Pizza mit knusprigem Boden, belegt mit fruchtiger Tomatensauce, frischem Mozzarella und aromatischem Basilikum.",
         "image": "./assets/imgs/margarita.jpg",
     },
 ]
@@ -38,13 +38,13 @@ let myDesserts = [
     {
         "name": "Tiramisu",
         "price": 9.99,
-        "description": "Nach Omas Geheimrezept mit echtem italienischen Kaffee",
+        "description": "Ein traditionelles, cremiges Tiramisu mit feinen Löffelbiskuits, kräftigem Espresso und einer zarten Mascarpone-Creme, mit Kakaopulver bestäubt.",
         "image": "./assets/imgs/tiramisu.jpg",
     },
     {
         "name": "Cheesecake",
         "price": 7.99,
-        "description": "Lecker Lecker",
+        "description": "Samtiger Cheesecake auf einem knusprigen Keksboden, veredelt mit einer fruchtigen Beerensauce oder einem Hauch von Zitronenzeste.",
         "image": "./assets/imgs/cheesecake.png",
     },
 ]

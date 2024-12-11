@@ -1,0 +1,164 @@
+@media(max-width:1100px) {
+    .main_right {
+        display: none;
+    }
+
+    .main_left {
+        width: 100%;
+    }
+
+    .d_none {
+        display: block;
+    }
+
+    .button_basket {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+        gap: 8px;
+        min-width: fit-content;
+        white-space: nowrap;
+    }
+}
+
+@media(max-width:840px) {
+    .title_dish {
+        font-size: 18px;
+    }
+
+    .price_dish {
+        font-size: 16px;
+    }
+
+    .description_dish {
+        font-size: 14px;
+    }
+
+    .organise_single_dives_dishes {
+        max-height: 120px !important;
+    }
+
+    .displayed_images_dishes {
+        max-height: 120px;
+    }
+}
+
+@media(max-width:730px) {
+    .title_dish {
+        font-size: 14px;
+    }
+
+    .price_dish {
+        font-size: 12px;
+    }
+
+    .description_dish {
+        font-size: 12px;
+    }
+
+    .organise_single_dives_dishes {
+        max-height: 100px !important;
+    }
+
+    .displayed_images_dishes {
+        max-height: 100px;
+    }
+
+    .orange_arrow_img {
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .starter_div p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .main_dish_div p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .dessert_div p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .aot_title_section {
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
+    }
+}
+
+@media(max-width:660px) {
+    .title_dish {
+        font-size: 14px;
+    }
+
+    .price_dish {
+        font-size: 12px;
+    }
+
+    .organise_single_dives_dishes {
+        max-height: 100px !important;
+    }
+
+    .displayed_images_dishes {
+        max-height: 100px;
+    }
+}
+
+@media(max-width:530px) {
+    .background_display_basket_overlay {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .description_dish {
+        display: none;
+    }
+
+    .steinofen_img {
+        height: 100px;
+        width: 100px;
+    }
+    .aot_title_section{
+        margin-top: -60px;
+    }
+}
+
+@media(max-width:430px) {
+    .background_display_basket_overlay {
+        max-height: 480px;
+    }
+
+    .star_rating {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        gap: 0;
+        padding-left: 0;
+        padding-bottom: 16px;
+    }
+
+    .star_rating p {
+        display: block;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+}
+
+@media(max-width:385px) {
+    .displayed_images_dishes {
+        max-width: 150px !important;
+        min-width: 150px !important;
+    }
+}

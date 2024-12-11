@@ -8,6 +8,8 @@
     <link rel="icon" type="x-icon/image" href="./assets/icons/favicon.ico">
     <link rel="stylesheet" href="./style/standard.css">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/mobile.css">
+    <link rel="stylesheet" href="./style/overlay.css">
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,23 +21,31 @@
 </head>
 
 <body onload="init()">
-    <header></header>
+    <header>
+        <div onclick="openBasket()" class="button_basket d_none_basket">
+            <span class="material-symbols-outlined">shopping_basket</span>
+            <p>Warenkorb (0)</p>
+        </div>
+    </header>
+    <div onclick="closeBasket()" id="overlay_div" class="d_none_overlay overlay_div"></div>
     <div class="main_content" id="main_content">
         <div id="main_left" class="main_left">
             <img class="aot_img" src="./assets/imgs/aot-img.jpg" alt="Pizza">
             <div class="steinofen-img_div">
                 <img class="steinofen_img" src="./assets/imgs/stone_oven.jpg" alt="Steinofen">
             </div>
-            <h1 class="restaurant_name_main">Restaurant xyz</h1>
-            <div class="star_rating">
-                <div>
-                    <img class="star" src="./assets/imgs/full_star.png">
-                    <img class="star" src="./assets/imgs/full_star.png">
-                    <img class="star" src="./assets/imgs/full_star.png">
-                    <img class="star" src="./assets/imgs/half_star.png">
-                    <img class="star" src="./assets/imgs/empty_star.png">
+            <div class="aot_title_section">
+                <h1 class="restaurant_name_main">Giovannis Pizzeria</h1>
+                <div class="star_rating">
+                    <div>
+                        <img class="star" src="./assets/imgs/full_star.png">
+                        <img class="star" src="./assets/imgs/full_star.png">
+                        <img class="star" src="./assets/imgs/full_star.png">
+                        <img class="star" src="./assets/imgs/half_star.png">
+                        <img class="star" src="./assets/imgs/empty_star.png">
+                    </div>
+                    <p>( Bewertung: 3.7 von 5 Sternen)</p>
                 </div>
-                <p>( Bewertung: 3.7 von 5 Sternen)</p>
             </div>
             <div id="display_dishes_left" class="display_dishes_left">
                 <div onclick="toggleStarterDiv()" class="starter_div">
@@ -64,7 +74,11 @@
                     <p>Lieferkosten:</p>
                     <p><strong>Gesamt:</strong></p>
                 </div>
+                <div class="order_button_div">
+                    <p class="order_button">Jetzt bestellen</p>
+                </div>
             </div>
+
         </div>
     </div>
     <footer></footer>
@@ -72,6 +86,7 @@
     <script src="./script/db_script.js"></script>
     <script src="./script/script.js"></script>
     <script src="./script/template.js"></script>
+    <script src="./script/basket_mobile.js"></script>
 </body>
 
 </html>

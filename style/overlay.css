@@ -1,0 +1,76 @@
+.overlay_div {
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100vw;
+    overflow: hidden !important;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.615);
+    z-index: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+}
+
+.d_none_overlay {
+    display: none;
+}
+
+.background_display_basket_overlay {
+    height: 600px;
+    width: 400px;
+    background-color: white;
+    border: solid 2px #f08832;
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    cursor: auto;
+    padding: 0 8px;
+}
+
+.background_display_basket_overlay::-webkit-scrollbar {
+    width: 12px;
+    max-height: 550px;
+}
+
+.background_display_basket_overlay::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #f08832;
+    border-radius: 10px;
+}
+
+.background_display_basket_overlay::-webkit-scrollbar-thumb {
+    background: #f08832;
+    border-radius: 10px;
+}
+
+.background_display_basket_overlay::-webkit-scrollbar-thumb:hover {
+    background: #f0873283;
+}
+.title_section_basket{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 8px;
+}
+.close_button_overlay{
+    color: grey;
+    border: grey solid 2px;
+    border-radius: 10px;
+    height: 20px;
+    width: auto;
+    padding: 4px;
+    transform: scale(1);
+    cursor: pointer;
+}
+.close_button_overlay:hover{
+    transform: scale(1.05);
+}
+.close_button_overlay_div{
+display: flex;
+justify-content: center;
+align-items: center;
+transform: translateY(-10px);
+}

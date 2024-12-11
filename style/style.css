@@ -1,9 +1,22 @@
+.d_none{
+    display: none;
+}
+.d_none_basket{
+    display: none;
+}
+.d_none_main{
+    display: none;
+}
 header{
     background-color: #f08832;
     height: 100px;
     width: auto;
     top: 0;
     right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 48px;
 }
 footer{
     background-color: #f08832;
@@ -16,6 +29,23 @@ footer{
     flex-grow: 1;
     width: 100%;
     display: flex;
+}
+.button_basket{
+    font-size: 24px;
+    color: gray;
+    border: 2px solid gray;
+    padding: 8px;
+    border-radius: 25px;
+    cursor: pointer;
+    transform: scale(0.98);
+}
+.button_basket:hover{
+    transform: scale(1);
+    filter: drop-shadow(0 0 4px grey);
+}
+.button_basket p{
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 .main_left{
     height: 100%;
@@ -38,8 +68,14 @@ footer{
     width: 100%;
     object-fit: cover;
 }
+.aot_title_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    margin-top: -80px;
+}
 .restaurant_name_main{
-    margin-top: -60px;
     padding-left: 8px;
 }
 .steinofen_img{
@@ -170,9 +206,9 @@ footer{
     border: solid 2px #f4f4f4;
     margin: 8px;
     border-radius: 25px;
+    max-height: 150px !important;
 }
 .displayed_images_dishes{
-    height: 140px;
     min-width: 200px;
     max-width: 200px;
     object-fit: cover;
@@ -248,7 +284,6 @@ footer{
 }
 .star_rating{
     display: flex;
-    display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 32px;
@@ -260,6 +295,7 @@ footer{
 .basket_total_cost_calculation{
     border-top: solid 2px #f9f5f2;
     border-bottom: solid 2px #f9f5f2;
+    padding: 0 8px;
 }
 .basket_total_cost_calculation p{
     margin-block-start: 4px;
@@ -268,4 +304,21 @@ footer{
 .message_basket_empty{
     color: grey;
     padding: 8px;
+}
+.order_button_div{
+    display: flex;
+    justify-content: center;
+}
+.order_button{
+    padding: 8px 12px;
+    border: black 2px solid;
+    background-color: #f08832;
+    font-size: 22px;
+    border-radius: 25px;
+    transform: scale(1);
+    cursor: pointer;
+}
+.order_button:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 4px black);
 }
