@@ -69,12 +69,15 @@
                 </div>
             </div>
             <div class="menu-section">
-                <p>Uber uns</p>
-                <p>Location</p>
+                <p class="circled_menu_button"><span class="material-symbols-outlined">info</span>Uber uns</p>
+                <p onclick="openLocation()" class="circled_menu_button"><span class="material-symbols-outlined">location_on</span>Location</p>
                 <p>Vorspeisen</p>
                 <p>Hauptgerichte</p>
                 <p>Desserts</p>
+                <p>Getranke</p>
+                <p>Specials</p>
             </div>
+            <div onclick="closeLocation()" id="display_location" class="display_location d_none_location"></div>
             <div id="display_dishes_left" class="display_dishes_left">
                 <div onclick="toggleStarterDiv()" class="starter_div">
                     <img src="./assets/imgs/orange_arrows.png" class="orange_arrow_img">
@@ -91,6 +94,16 @@
                     <p>Nachspeisen</p>
                 </div>
                 <div id="display_desserts" class="display_desserts"></div>
+                <div onclick="toggleDrinksDiv()" class="drinks_div">
+                    <img src="./assets/imgs/orange_arrows.png" class="orange_arrow_img">
+                    <p>Getranke</p>
+                </div>
+                <div id="display_drinks" class="display_drinks"></div>
+                <div onclick="toggleSpecialsDiv()" class="specials_div">
+                    <img src="./assets/imgs/orange_arrows.png" class="orange_arrow_img">
+                    <p>Specials</p>
+                </div>
+                <div id="display_specials" class="display_specials"></div>
             </div>
         </div>
         <div class="main_right">
@@ -146,6 +159,7 @@
     <script src="./script/script.js"></script>
     <script src="./script/template.js"></script>
     <script src="./script/basket_mobile.js"></script>
+    <script src="./script/basket.js"></script>
 </body>
 
 </html>

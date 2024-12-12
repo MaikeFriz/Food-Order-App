@@ -49,4 +49,34 @@ let myDesserts = [
     },
 ]
 
+let myDrinks = [
+    {
+        "name": "Wasser",
+        "price": 2.99,
+        "description": "Still oder spritzig",
+        "image": "./assets/imgs/water.jpg",
+    },
+    {
+        "name": "Cola",
+        "price": 3.99,
+        "description": "Cola Zero oder Cola mit Zucker",
+        "image": "./assets/imgs/coke.jpg",
+    },
+]
+
+let mySpecials = [
+    {
+        "name": "Canollo",
+        "price": 7.99,
+        "description": "Mit Schoko oder Pistazienfullung",
+        "image": "./assets/imgs/canollo.jpg",
+    },
+    {
+        "name": "Aranchini",
+        "price": 7.99,
+        "description": "Mit verschiendenem Gemuse und Krautern der Province verfeinert",
+        "image": "./assets/imgs/aranchini.jpg",
+    },
+]
+
 let myBasket = []
