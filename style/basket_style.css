@@ -1,0 +1,238 @@
+.button_basket {
+    font-size: 24px;
+    color: gray;
+    border: 2px solid gray;
+    padding: 8px;
+    border-radius: 25px;
+    cursor: pointer;
+    transform: scale(0.98);
+}
+
+.button_basket:hover {
+    transform: scale(1);
+    filter: drop-shadow(0 0 4px grey);
+}
+
+.button_basket p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.basket {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 400px;
+    padding-top: 16px;
+}
+.basket_item_in_line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px 16px;
+    height: 40px;
+}
+
+.add_reduce_amount_dish_basket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.delete_symbol_basket {
+    color: #f08832;
+    cursor: pointer;
+    transform: scale(1);
+}
+
+.delete_symbol_basket:hover {
+    transform: scale(1.3);
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.amount_number_basket {
+    font-size: 16px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.add_symbol_basket {
+    height: 24px;
+    width: auto;
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+.add_symbol_basket:hover {
+    transform: scale(1.1);
+}
+
+.reduce_symbol_basket {
+    width: 24px;
+    height: 6px;
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+.reduce_symbol_basket:hover {
+    transform: scale(1.1);
+}
+
+.price_basket {
+    font-size: 16px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.title_basket {
+    text-align: center;
+    border-bottom: solid 1px #f4f4f4;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 16px 0;
+}
+
+.name_dish_basket {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 0 16px
+}
+
+.basket_total_cost_calculation {
+    border-top: solid 2px #f9f5f2;
+    border-bottom: solid 2px #f9f5f2;
+    padding: 0 8px;
+}
+
+.basket_total_cost_calculation p {
+    margin-block-start: 4px;
+    margin-block-end: 4px;
+}
+
+.message_basket_empty {
+    color: grey;
+    padding: 8px;
+}
+
+.order_button_div {
+    display: flex;
+    justify-content: center;
+}
+
+.order_button {
+    padding: 8px 12px;
+    border: black 2px solid;
+    background-color: #f08832;
+    font-size: 22px;
+    border-radius: 25px;
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.order_button:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 4px black);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 280px;
+    height: 64px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 50px;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px; 
+    box-sizing: border-box;
+}
+
+.slider-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.slider-content i {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.knob {
+    position: absolute;
+    height: 56px;
+    width: 140px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50px;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+input:checked + .slider {
+    background-color: rgb(75, 74, 74);
+}
+
+input:checked + .slider .knob {
+    transform: translateX(130px);
+}
+
+input:checked + .slider .slider-content {
+    color: white;
+}
+.text{
+    color: black;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+.text p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.bigger_font{
+    font-size: 18px;
+}
+.toggle_swich-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+}
+.message_basket_empty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.message_basket_empty span{
+    font-size: 56px;
+}

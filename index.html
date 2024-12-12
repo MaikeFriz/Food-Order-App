@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/mobile.css">
     <link rel="stylesheet" href="./style/overlay.css">
+    <link rel="stylesheet" href="./style/basket_style.css">
     <!--Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,7 @@
 
 <body onload="init()">
     <header>
-        <span class="material-symbols-outlined">menu</span>
+        <span onclick="openMenuHeader()" class="material-symbols-outlined">menu</span>
         <div onclick="openBasket()" class="button_basket d_none_basket">
             <span class="material-symbols-outlined">shopping_basket</span>
             <p>Warenkorb (0)</p>
@@ -32,6 +33,7 @@
         </div>
 
     </header>
+    <div onclick="closeOverlayMenu()" id="overlay_menu" class="overlay_menu d_none_menu"></div>
     <div onclick="closeBasket()" id="overlay_div" class="d_none_overlay overlay_div"></div>
     <div class="main_content" id="main_content">
         <div id="main_left" class="main_left">
@@ -66,22 +68,29 @@
                     </div>
                 </div>
             </div>
+            <div class="menu-section">
+                <p>Uber uns</p>
+                <p>Location</p>
+                <p>Vorspeisen</p>
+                <p>Hauptgerichte</p>
+                <p>Desserts</p>
+            </div>
             <div id="display_dishes_left" class="display_dishes_left">
                 <div onclick="toggleStarterDiv()" class="starter_div">
                     <img src="./assets/imgs/orange_arrows.png" class="orange_arrow_img">
                     <p>Vorspeisen</p>
                 </div>
-                <div id="display_starters" class="display_starters d_none_main"></div>
+                <div id="display_starters" class="display_starters"></div>
                 <div onclick="togglemainDishesDiv()" class="main_dish_div">
                     <img src="./assets/imgs/orange_arrows.png" class="orange_arrow_img">
                     <p>Hauptgerichte</p>
                 </div>
-                <div id="display_main_dishes" class="display_main_dishes d_none_main"></div>
+                <div id="display_main_dishes" class="display_main_dishes"></div>
                 <div onclick="toggleDessertDiv()" class="dessert_div">
                     <img src="./assets/imgs/orange_arrows.png" class="orange_arrow_img">
                     <p>Nachspeisen</p>
                 </div>
-                <div id="display_desserts" class="display_desserts d_none_main"></div>
+                <div id="display_desserts" class="display_desserts"></div>
             </div>
         </div>
         <div class="main_right">

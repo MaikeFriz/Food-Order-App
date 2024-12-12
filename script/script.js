@@ -21,6 +21,38 @@ function toggleDessertDiv() {
     displayDesserts.classList.toggle('d_none_main');
 }
 
+function openMenuHeader(){
+    let overlayMenu = document.getElementById('overlay_menu');
+    overlayMenu.classList.remove('d_none_menu');
+    overlayMenu.innerHTML = templateMenu();
+}
+
+function templateMenu(){
+    return `
+<div onclick="eventBubblingMenuOverlay(event)" class="inner_overlay_manu">
+    <div>
+        <img onclick="closeOverlayMenu()" class="close_button_overlay_menu" src="./assets/imgs/close_button.png">
+    </div>
+    <div class="menu-section_overlay">
+        <p>Uber uns</p>
+        <p>Location</p>
+        <p>Vorspeisen</p>
+        <p>Hauptgerichte</p>
+        <p>Desserts</p>
+    </div>
+</div>
+    `
+}
+
+function closeOverlayMenu(){
+    let overlayMenu = document.getElementById('overlay_menu');
+    overlayMenu.classList.add('d_none_menu');
+}
+
+function eventBubblingMenuOverlay(event){
+    event.stopPropagation();
+}
+
 function renderStarter() {
     let displayStarters = document.getElementById('display_starters');
     displayStarters.innerHTML = "";
@@ -103,7 +135,7 @@ function renderBasket() {
         basket.innerHTML = `
         <div class="message_basket_empty">
         <span class="material-symbols-outlined">shopping_basket</span>
-        <p class="message_basket_empty"><i>Ihr Warenkorb ist leer. <br> Fugen Sie ein Gericht hinzu.</i></p>
+        <p class="message_basket_empty"><i>Ihr Warenkorb ist leer. <br> Fugen Sie Ihre Bestellung hinzu.</i></p>
         </div>
         `
     } else {
