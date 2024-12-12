@@ -100,7 +100,12 @@ function renderBasket() {
     let basket = document.getElementById('display_content_basket');
     basket.innerHTML = "";
     if (myBasket.length === 0) {
-        basket.innerHTML = `<p class="message_basket_empty"><i>Ihr Warenkorb ist leer. Fugen Sie ein Gericht hinzu.</i></p>`
+        basket.innerHTML = `
+        <div class="message_basket_empty">
+        <span class="material-symbols-outlined">shopping_basket</span>
+        <p class="message_basket_empty"><i>Ihr Warenkorb ist leer. <br> Fugen Sie ein Gericht hinzu.</i></p>
+        </div>
+        `
     } else {
         for (let indexBasket = 0; indexBasket < myBasket.length; indexBasket++) {
             basket.innerHTML += templateDisplayBasket(myBasket[indexBasket], indexBasket);
@@ -140,7 +145,6 @@ function pushStartersToBasket(indexStarter) {
     renderBasket();
     renderOrdersInBasketOverlay()
 }
-
 
 function pushMainDishesTobasket(indexMain) {
     let dishBasket = myMainDishes[indexMain];
@@ -194,4 +198,10 @@ function adjustAmountItembasket(indexBasket, change) {
     renderOrdersInBasketOverlay()
 }
 
+function adjustPriceInBasket(indexBasket, change){
+    let item = myBasket[indexBasket];
+    let priceDish = myBasket[indexBasket].price;
+    let totalPriceDish = priceDish * item.amount;
+
+}
 
