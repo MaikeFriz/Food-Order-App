@@ -127,7 +127,11 @@ function renderBasket() {
     let basket = document.getElementById('display_content_basket');
     let subtotalDiv = document.getElementById('subtotal');
     let subtotal = 0;
+    let deliveryCosts = document.getElementById('delivery_costs');
+    let slider = document.getElementById('swich_input');
+
     basket.innerHTML = "";
+
     if (myBasket.length === 0) {
         subtotalDiv.innerHTML = `<p>0.00 €</p>`
         basket.innerHTML = `
@@ -143,6 +147,12 @@ function renderBasket() {
             subtotal += totalPrice;
             subtotalDiv.innerHTML = `<p>${subtotal.toFixed(2)} €</p>`
             basket.innerHTML += templateDisplayBasket(dish, indexBasket, totalPrice);
+        }
+
+        if (slider.checked){
+            deliveryCosts.innerHTML = `<p>5.99 €</p>`;
+        } else {
+            deliveryCosts.innerHTML = `<p>0.00 €</p>`;
         }
     }
 }

@@ -134,10 +134,10 @@
                 <div class="toggle_swich-div">
                     <div class="toggle_swich">
                         <label class="switch">
-                            <input type="checkbox">
+                            <input onchange="renderBasket()" id="swich_input" type="checkbox">
                             <span class="slider">
                                 <!-- Links -->
-                                <div class="slider-content left">
+                                <div id="slider-content left" class="slider-content left">
                                     <i class="fas fa-store"></i>
                                     <span class="text">
                                         <span class="material-symbols-outlined">shopping_bag</span>
@@ -148,7 +148,7 @@
                                     </span>
                                 </div>
                                 <!-- Rechts -->
-                                <div class="slider-content right">
+                                <div id="slider-content right" class="slider-content right">
                                     <i class="fas fa-truck"></i>
                                     <span class="text">
                                         <span class="material-symbols-outlined">local_shipping</span>
@@ -172,7 +172,7 @@
                         <p>Lieferkosten:</p>
                         <p><strong>Gesamt:</strong></p>
                     </div>
-                    <div>
+                    <div class="text_align_end">
                         <p id="subtotal"></p>
                         <p id="delivery_costs"></p>
                         <p id="total"></p>
