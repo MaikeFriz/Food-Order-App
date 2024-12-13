@@ -124,11 +124,11 @@ function templateDisplaySpecials(indexSpecial) {
 }
 
 function renderBasket() {
-    const basket = document.getElementById('display_content_basket');
-    const subtotalDiv = document.getElementById('subtotal');
-    const deliveryCostsDiv = document.getElementById('delivery_costs');
-    const slider = document.getElementById('swich_input');
-    const totalRef = document.getElementById('total');
+    let basket = document.getElementById('display_content_basket');
+    let subtotalDiv = document.getElementById('subtotal');
+    let deliveryCostsDiv = document.getElementById('delivery_costs');
+    let slider = document.getElementById('swich_input');
+    let totalRef = document.getElementById('total');
   
     let subtotal = 0;
     let deliveryCosts = 0;
@@ -146,8 +146,8 @@ function renderBasket() {
       `;
     } else {
       for (let indexBasket = 0; indexBasket < myBasket.length; indexBasket++) {
-        const dish = myBasket[indexBasket];
-        const totalPrice = dish.price * dish.amount;
+        let dish = myBasket[indexBasket];
+        let totalPrice = dish.price * dish.amount;
         subtotal += totalPrice;
         subtotalDiv.innerHTML = `<p>${subtotal.toFixed(2)} €</p>`;
         basket.innerHTML += templateDisplayBasket(dish, indexBasket, totalPrice);

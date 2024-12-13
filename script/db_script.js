@@ -68,13 +68,13 @@ let mySpecials = [
     {
         "name": "Canollo",
         "price": 7.99,
-        "description": " Knusprige Teigröllchen, gefüllt mit einer samtigen Ricotta-Creme und verfeinert mit kandierten Früchten oder Schokostückchen – ein Hauch von Dolce Vita auf Ihrem Teller.",
+        "description": " Knusprige Teigröllchen, gefüllt mit einer samtigen Ricotta-Creme und verfeinert mit kandierten Früchten oder Schokostückchen.",
         "image": "./assets/imgs/canollo.jpg",
     },
     {
         "name": "Aranchini",
         "price": 7.99,
-        "description": "Goldbraun frittierte Reisbällchen mit einer herzhaften Füllung aus Ragù, Mozzarella und Erbsen, serviert auf einem Bett aus würziger Tomatensauce.",
+        "description": "Goldbraune Reisbällchen mit einer herzhaften Füllung, serviert auf einem Bett aus würziger Tomatensauce.",
         "image": "./assets/imgs/aranchini.jpg",
     },
 ]
