@@ -74,3 +74,37 @@ justify-content: center;
 align-items: center;
 transform: translateY(-10px);
 }
+
+.family_img{
+    object-fit: cover;
+    width: 400px;
+    height: 218px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transform: translateY(-20px);
+}
+.padding_text{
+    padding: 0 4px;
+    text-align: center;
+    transform: translateY(-30px);
+}
+.close_button_about_us{
+    height: 20px;
+    width: auto;
+    transform: scale(1);
+    cursor: pointer;
+}
+.close_button_about_us:hover{
+    transform: scale(1.05);
+}
+.close_button_overlay_about_us_div{
+ width: 400px;
+ height: auto;
+ display: flex;
+ justify-content: flex-end;
+ padding-right: 30px;
+padding-top: 25px;
+}
+.h2_uber_uns{
+    transform: translateY(-20px);
+}

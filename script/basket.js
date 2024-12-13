@@ -125,8 +125,11 @@ function templateDisplaySpecials(indexSpecial) {
 
 function renderBasket() {
     let basket = document.getElementById('display_content_basket');
+    let subtotalDiv = document.getElementById('subtotal');
+    let subtotal = 0;
     basket.innerHTML = "";
     if (myBasket.length === 0) {
+        subtotalDiv.innerHTML = `<p>0.00 €</p>`
         basket.innerHTML = `
         <div class="message_basket_empty">
         <span class="material-symbols-outlined">shopping_basket</span>
@@ -135,12 +138,16 @@ function renderBasket() {
         `
     } else {
         for (let indexBasket = 0; indexBasket < myBasket.length; indexBasket++) {
-            basket.innerHTML += templateDisplayBasket(myBasket[indexBasket], indexBasket);
+            let dish = myBasket[indexBasket];
+            let totalPrice = dish.price * dish.amount;
+            subtotal += totalPrice;
+            subtotalDiv.innerHTML = `<p>${subtotal.toFixed(2)} €</p>`
+            basket.innerHTML += templateDisplayBasket(dish, indexBasket, totalPrice);
         }
     }
 }
 
-function templateDisplayBasket(dish, indexBasket) {
+function templateDisplayBasket(dish, indexBasket, totalPrice) {
     return `
 <h3 class="name_dish_basket">${dish.name}</h3>
 <div class="basket_item_in_line">
@@ -149,7 +156,7 @@ function templateDisplayBasket(dish, indexBasket) {
         <p class="amount_number_basket">${dish.amount}</p>
         <img onclick="adjustAmountItembasket(${indexBasket}, +1)" class="add_symbol_basket" src="./assets/imgs/add_symbol_basket.png">
     </div>
-    <p class="price_basket">${dish.price} €</p>
+  <p id="price_basket_item${indexBasket}" class="price_basket">${totalPrice.toFixed(2)} €</p>
     <p onclick="deleteFromBasket(${indexBasket})" class="delete_symbol_basket"><span class="material-symbols-outlined">delete</span></p>
 </div>
     `
@@ -255,5 +262,5 @@ function adjustAmountItembasket(indexBasket, change) {
         myBasket.splice(indexBasket, 1);
     }
     renderBasket();
-    renderOrdersInBasketOverlay()
+    renderOrdersInBasketOverlay();
 }

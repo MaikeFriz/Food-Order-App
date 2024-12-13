@@ -96,33 +96,53 @@ function bubblingPreventionLocation(event) {
     event.stopPropagation();
 }
 
-function openAboutUs(){
+function openAboutUs() {
     let aboutUs = document.getElementById('display_about_us');
     aboutUs.classList.remove('d_none_about_us');
     aboutUs.innerHTML = templateAboutUs();
 }
 
-function templateAboutUs(){
+function templateAboutUs() {
     return `
-    <div onclick="bubblingPreventionAboutUs(event)" class="inner_overlay_about_us">
-    
+<div onclick="bubblingPreventionAboutUs(event)" class="inner_overlay_about_us">
+<div class="close_button_overlay_about_us_div">
+    <img onclick="closeAboutUs()" class="close_button_about_us" src="./assets/imgs/close_button_black.png">
     </div>
+    <h2 class="h2_uber_uns">Über uns</h2>
+    <div class="padding_text">
+        <p>Willkommen bei Giovanni's Pizzaria! Als <strong> Familienunternehmen in der dritten Generation
+            </strong>stehen wir seit Jahrzehnten für authentische italienische Küche und herzliche Gastfreundschaft. Bei uns wird jede Pizza noch nach
+            traditionellem Rezept und mit viel Liebe zum Detail zubereitet – genau so, wie es schon Nonno Giovanni vor vielen Jahren begonnen hat.</p>
+    </div>
+    <div class="padding_text">
+        <p>
+            Ob knusprige Pizzen aus dem Steinofen, hausgemachte Pasta oder feine Antipasti – bei Giovanni's Pizzaria
+            bringen wir ein Stück Italien direkt auf Ihren Teller.
+    </div>
+    <div class="padding_text">
+        <p>
+            <strong> Wir freuen uns darauf, Sie bei uns willkommen zu heißen!</strong>
+        </p>
+    </div>
+    <img class="family_img" src="./assets/imgs/restaurant.png">
+</div>
+
     `
 }
 
-function closeAboutUs(){
+function closeAboutUs() {
     let aboutUs = document.getElementById('display_about_us');
     aboutUs.classList.add('d_none_about_us');
 }
 
-function bubblingPreventionAboutUs(event){
+function bubblingPreventionAboutUs(event) {
     event.stopPropagation();
 }
 
-function changeHeartStatus(){
+function changeHeartStatus() {
     let heartImgRef = document.getElementById(`like_heart`);
     myRestaurant[0].liked = !myRestaurant[0].liked;
-    if(myRestaurant[0].liked === true){
+    if (myRestaurant[0].liked === true) {
         heartImgRef.src = "./assets/imgs/like_heart_full.png";
     } else {
         heartImgRef.src = "./assets/imgs/like_heart_empty.png"
