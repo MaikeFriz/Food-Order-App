@@ -42,6 +42,14 @@
     .displayed_images_dishes {
         max-height: 120px;
     }
+
+    .d_none_menu_button {
+        display: block;
+    }
+
+    .menu-section {
+        display: none;
+    }
 }
 
 @media(max-width:730px) {
@@ -89,7 +97,8 @@
         display: flex;
         flex-direction: column;
     }
-    .aot_title_section_right{
+
+    .aot_title_section_right {
         margin-top: 0;
         display: flex;
         flex-direction: column;
@@ -122,6 +131,25 @@
         margin-left: 40px;
         margin-right: 40px;
     }
+    
+    .inner_overlay_about_us{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .inner_overlay_manu{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .inner_overlay_location{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .google_maps{
+        width: fit-content;
+    }
 
     .description_dish {
         display: none;
@@ -131,8 +159,17 @@
         height: 100px;
         width: 100px;
     }
-    .aot_title_section{
+
+    .aot_title_section {
         margin-top: -60px;
+    }
+
+    .d_none_mobile_basket {
+        display: block;
+    }
+
+    .mobile_basket_button {
+        display: none;
     }
 }
 

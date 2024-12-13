@@ -42,7 +42,12 @@ function renderOrdersInBasketOverlay(){
     let displayContentBasket = document.getElementById('display_content_basket_overlay');
     if (!displayContentBasket) return; // Element existiert nicht, also Funktion beenden
     if (myBasket.length === 0) {
-        displayContentBasket.innerHTML = `<p class="message_basket_empty"><i>Ihr Warenkorb ist leer. Fugen Sie ein Gericht hinzu.</i></p>`
+        displayContentBasket.innerHTML = `
+        <div class="message_basket_empty">
+            <span class="material-symbols-outlined">shopping_basket</span>
+            <p class="message_basket_empty"><i>Ihr Warenkorb ist leer. <br> Fügen Sie Ihre Bestellung hinzu.</i></p>
+        </div>
+        `
     } else {
         displayContentBasket.innerHTML = "";
         for (let indexBasket = 0; indexBasket < myBasket.length; indexBasket++) {

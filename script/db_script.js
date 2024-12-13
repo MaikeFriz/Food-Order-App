@@ -1,6 +1,6 @@
  let myStarters = [
     {
-        "name": "Pizzabrotchen",
+        "name": "Pizzabrötchen",
         "price": 7.99,
         "description": "Frisch gebackenes, knuspriges Pizzabrot, verfeinert mit aromatischem Olivenöl und duftenden Kräutern.",
         "image": "./assets/imgs/pizza_bread.png",
@@ -53,13 +53,13 @@ let myDrinks = [
     {
         "name": "Wasser",
         "price": 2.99,
-        "description": "Still oder spritzig",
+        "description": "Erfrischendes Wasser, wahlweise still oder spritzig, kristallklar und perfekt gekühlt serviert.",
         "image": "./assets/imgs/water.jpg",
     },
     {
         "name": "Cola",
         "price": 3.99,
-        "description": "Cola Zero oder Cola mit Zucker",
+        "description": "Klassische Cola – mit Zucker oder als zuckerfreie Variante – prickelnd, belebend und eisgekühlt für den puren Genuss.",
         "image": "./assets/imgs/coke.jpg",
     },
 ]
@@ -68,15 +68,21 @@ let mySpecials = [
     {
         "name": "Canollo",
         "price": 7.99,
-        "description": "Mit Schoko oder Pistazienfullung",
+        "description": " Knusprige Teigröllchen, gefüllt mit einer samtigen Ricotta-Creme und verfeinert mit kandierten Früchten oder Schokostückchen – ein Hauch von Dolce Vita auf Ihrem Teller.",
         "image": "./assets/imgs/canollo.jpg",
     },
     {
         "name": "Aranchini",
         "price": 7.99,
-        "description": "Mit verschiendenem Gemuse und Krautern der Province verfeinert",
+        "description": "Goldbraun frittierte Reisbällchen mit einer herzhaften Füllung aus Ragù, Mozzarella und Erbsen, serviert auf einem Bett aus würziger Tomatensauce.",
         "image": "./assets/imgs/aranchini.jpg",
     },
 ]
 
 let myBasket = []
+
+let myRestaurant = [
+    {
+        "liked": false,
+    }
+]

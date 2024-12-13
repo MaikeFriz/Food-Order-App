@@ -32,61 +32,102 @@ function toggleSpecialsDiv() {
     displaySpecials.classList.toggle('d_none_main');
 }
 
-function openMenuHeader(){
+function openMenuHeader() {
     let overlayMenu = document.getElementById('overlay_menu');
     overlayMenu.classList.remove('d_none_menu');
     overlayMenu.innerHTML = templateMenu();
 }
 
-function templateMenu(){
+function templateMenu() {
     return `
 <div onclick="eventBubblingMenuOverlay(event)" class="inner_overlay_manu">
-    <div>
-        <img onclick="closeOverlayMenu()" class="close_button_overlay_menu" src="./assets/imgs/close_button_black.png">
-    </div>
     <div class="menu-section_overlay">
-        <p>Uber uns</p>
-        <p>Location</p>
+        <p onclick="openAboutUs()" class="circled_menu_button"><span class="material-symbols-outlined">info</span>Über
+            uns</p>
+        <p onclick="openLocation()" class="circled_menu_button"><span
+                class="material-symbols-outlined">location_on</span>Location</p>
         <p>Vorspeisen</p>
         <p>Hauptgerichte</p>
         <p>Desserts</p>
+        <p>Getränke</p>
+        <p>Specials</p>
+    </div>
+    <div>
+        <img onclick="closeOverlayMenu()" class="close_button_overlay_menu" src="./assets/imgs/close_button_black.png">
     </div>
 </div>
     `
 }
 
-function closeOverlayMenu(){
+function closeOverlayMenu() {
     let overlayMenu = document.getElementById('overlay_menu');
     overlayMenu.classList.add('d_none_menu');
 }
 
-function eventBubblingMenuOverlay(event){
+function eventBubblingMenuOverlay(event) {
     event.stopPropagation();
 }
 
-function openLocation(){
+function openLocation() {
     let displayLocation = document.getElementById('display_location');
     displayLocation.classList.remove('d_none_location');
     displayLocation.innerHTML = displayLocationWondow();
 }
 
-function displayLocationWondow(){
+function displayLocationWondow() {
     return `
-    <div onclick="bubblingPreventionLocation(event)" class="inner_overlay_location">
-
+<div onclick="bubblingPreventionLocation(event)" class="inner_overlay_location">
+    <iframe class="google_maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2099.4609735822687!2d108.24636785398653!3d16.06159509308526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421782f7fa0ee3%3A0xeafb8ba272ee55ac!2sMy%20Khe%20Beach!5e0!3m2!1sde!2sus!4v1734015075845!5m2!1sde!2sus"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="address_overlay">
+        <span class="material-symbols-outlined">location_on</span>
+        <p>Giovannis Pizzeria, Strase 3 12345 Musterort</p>
+    </div>
+    <img onclick="closeLocation()" class="close_button_overlay_location" src="./assets/imgs/close_button_black.png">
 </div>
     `
 }
 
-function closeLocation(){
+function closeLocation() {
     let displayLocation = document.getElementById('display_location');
     displayLocation.classList.add('d_none_location');
 }
 
-function bubblingPreventionLocation(event){
+function bubblingPreventionLocation(event) {
     event.stopPropagation();
 }
 
+function openAboutUs(){
+    let aboutUs = document.getElementById('display_about_us');
+    aboutUs.classList.remove('d_none_about_us');
+    aboutUs.innerHTML = templateAboutUs();
+}
+
+function templateAboutUs(){
+    return `
+    <div onclick="bubblingPreventionAboutUs(event)" class="inner_overlay_about_us">
+    
+    </div>
+    `
+}
+
+function closeAboutUs(){
+    let aboutUs = document.getElementById('display_about_us');
+    aboutUs.classList.add('d_none_about_us');
+}
+
+function bubblingPreventionAboutUs(event){
+    event.stopPropagation();
+}
+
+function changeHeartStatus(){
+    let heartImgRef = document.getElementById(`like_heart`);
+    myRestaurant[0].liked = !myRestaurant[0].liked;
+    if(myRestaurant[0].liked === true){
+        heartImgRef.src = "./assets/imgs/like_heart_full.png";
+    } else {
+        heartImgRef.src = "./assets/imgs/like_heart_empty.png"
+    }
+}
 
 
 

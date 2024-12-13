@@ -130,7 +130,7 @@ function renderBasket() {
         basket.innerHTML = `
         <div class="message_basket_empty">
         <span class="material-symbols-outlined">shopping_basket</span>
-        <p class="message_basket_empty"><i>Ihr Warenkorb ist leer. <br> Fugen Sie Ihre Bestellung hinzu.</i></p>
+        <p class="message_basket_empty"><i>Ihr Warenkorb ist leer. <br> Fügen Sie Ihre Bestellung hinzu.</i></p>
         </div>
         `
     } else {
@@ -245,7 +245,6 @@ function deleteFromBasket(indexBasket) {
     myBasket.splice(indexBasket, 1)
     renderBasket();
     renderOrdersInBasketOverlay()
-    console.log(indexBasket);
 }
 
 function adjustAmountItembasket(indexBasket, change) {

@@ -23,13 +23,23 @@
 
 <body onload="init()">
     <header>
-        <span onclick="openMenuHeader()" class="material-symbols-outlined">menu</span>
-        <div onclick="openBasket()" class="button_basket d_none_basket">
-            <span class="material-symbols-outlined">shopping_basket</span>
-            <p>Warenkorb (0)</p>
+        <div class="d_none_menu_button">
+            <span onclick="openMenuHeader()" class="material-symbols-outlined">menu</span>
         </div>
-        <div class="like_heart_div">
-            <img class="like_heart" src="./assets/imgs/like_heart_empty.png">
+        <div class="mobile_basket_button">
+            <div onclick="openBasket()" class="button_basket d_none_basket">
+                <span class="material-symbols-outlined">shopping_basket</span>
+                <p>Warenkorb (0)</p>
+            </div>
+        </div>
+        <div class="d_none_mobile_basket">
+            <div onclick="openBasket()" class="button_basket d_none_basket">
+                <span class="material-symbols-outlined">shopping_basket</span>
+                <p>(0)</p>
+            </div>
+        </div>
+        <div onclick="changeHeartStatus()" class="like_heart_div">
+            <img id="like_heart" class="like_heart" src="./assets/imgs/like_heart_empty.png">
         </div>
 
     </header>
@@ -48,7 +58,7 @@
                 <div class="aot_title_section_right">
                     <div class="self-collection_possible">
                         <span class="material-symbols-outlined">directions_car</span>
-                        <p>Selbstabholung moglich</p>
+                        <p>Selbstabholung möglich</p>
                     </div>
                     <div class="min_order_amount">
                         <span class="material-symbols-outlined">shopping_bag</span>
@@ -69,39 +79,52 @@
                 </div>
             </div>
             <div class="menu-section">
-                <p class="circled_menu_button"><span class="material-symbols-outlined">info</span>Uber uns</p>
-                <p onclick="openLocation()" class="circled_menu_button"><span class="material-symbols-outlined">location_on</span>Location</p>
-                <p>Vorspeisen</p>
-                <p>Hauptgerichte</p>
-                <p>Desserts</p>
-                <p>Getranke</p>
-                <p>Specials</p>
+                <p onclick="openAboutUs()" class="circled_menu_button"><span
+                        class="material-symbols-outlined">info</span>Über uns</p>
+                <p onclick="openLocation()" class="circled_menu_button"><span
+                        class="material-symbols-outlined">location_on</span>Location</p>
+                <a href="#vorspeisen">
+                    <p class="underline">Vorspeisen</p>
+                </a>
+                <a href="#hauptgerichte">
+                    <p class="underline">Hauptgerichte</p>
+                </a>
+                <a href="#desserts">
+                    <p class="underline">Desserts</p>
+                </a>
+                <a href="#getranke">
+                    <p class="underline">Getränke</p>
+                </a>
+                <a href="#specials">
+                    <p class="underline">Specials</p>
+                </a>
             </div>
+            <div onclick="closeAboutUs()" id="display_about_us" class="display_about_us d_none_about_us"></div>
             <div onclick="closeLocation()" id="display_location" class="display_location d_none_location"></div>
             <div id="display_dishes_left" class="display_dishes_left">
                 <div onclick="toggleStarterDiv()" class="starter_div">
                     <img src="./assets/imgs/orange_arrows.png" class="orange_arrow_img">
-                    <p>Vorspeisen</p>
+                    <p id="vorspeisen">Vorspeisen</p>
                 </div>
                 <div id="display_starters" class="display_starters"></div>
                 <div onclick="togglemainDishesDiv()" class="main_dish_div">
                     <img src="./assets/imgs/orange_arrows.png" class="orange_arrow_img">
-                    <p>Hauptgerichte</p>
+                    <p id="hauptgerichte">Hauptgerichte</p>
                 </div>
                 <div id="display_main_dishes" class="display_main_dishes"></div>
                 <div onclick="toggleDessertDiv()" class="dessert_div">
                     <img src="./assets/imgs/orange_arrows.png" class="orange_arrow_img">
-                    <p>Nachspeisen</p>
+                    <p id="desserts">Nachspeisen</p>
                 </div>
                 <div id="display_desserts" class="display_desserts"></div>
                 <div onclick="toggleDrinksDiv()" class="drinks_div">
                     <img src="./assets/imgs/orange_arrows.png" class="orange_arrow_img">
-                    <p>Getranke</p>
+                    <p id="getranke">Getränke</p>
                 </div>
                 <div id="display_drinks" class="display_drinks"></div>
                 <div onclick="toggleSpecialsDiv()" class="specials_div">
                     <img src="./assets/imgs/orange_arrows.png" class="orange_arrow_img">
-                    <p>Specials</p>
+                    <p id="specials">Specials</p>
                 </div>
                 <div id="display_specials" class="display_specials"></div>
             </div>
