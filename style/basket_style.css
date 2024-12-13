@@ -24,6 +24,28 @@
     height: 400px;
     padding-top: 16px;
 }
+.display_content_basket{
+    height: 250px;
+    overflow-y: scroll;
+}
+.display_content_basket::-webkit-scrollbar {
+    width: 12px;
+    max-height: 550px;
+}
+
+.display_content_basket::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #f08832;
+    border-radius: 10px;
+}
+
+.display_content_basket::-webkit-scrollbar-thumb {
+    background: #f08832;
+    border-radius: 10px;
+}
+
+.display_content_basket::-webkit-scrollbar-thumb:hover {
+    background: #f0873283;
+}
 .basket_item_in_line {
     display: flex;
     justify-content: space-between;

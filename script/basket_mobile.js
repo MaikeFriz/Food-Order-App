@@ -17,9 +17,16 @@ function templateBasketOverlay() {
         </div>
         <div id="display_content_basket_overlay" class="display_content_basket_overlay"></div>
         <div class="basket_total_cost_calculation">
-            <p>Zwischensumme:</p>
-            <p>Lieferkosten:</p>
-            <p><strong>Gesamt:</strong></p>
+            <div>
+                <p>Zwischensumme:</p>
+                <p>Lieferkosten:</p>
+                <p><strong>Gesamt:</strong></p>
+            </div>
+            <div class="text_align_end">
+                <p id="subtotal"></p>
+                <p id="delivery_costs"></p>
+                <p id="total"></p>
+            </div>
         </div>
         <div class="order_button_div">
             <p class="order_button">Jetzt bestellen</p>
