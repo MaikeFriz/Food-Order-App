@@ -1,5 +1,6 @@
 a{
     text-decoration: none;
+    color: black;
 }
 .d_none {
     display: none;
@@ -13,6 +14,9 @@ a{
 }
 
 .d_none_main {
+    display: none;
+}
+.d_none_menu_button{
     display: none;
 }
 
@@ -213,9 +217,9 @@ footer {
 
 .single_divs_dishes {
     height: 140px;
-    width: 100%;
-    border-bottom: solid 1px #f4f4f4;
     padding-left: 12px;
+    flex-grow: 1;
+    margin-right: 24px;
 }
 
 .display_starters {
@@ -405,168 +409,4 @@ footer {
     text-decoration: underline;
 }
 
-.overlay_menu {
-    background-color: rgba(0, 0, 0, 0.615);
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 2000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
 
-.d_none_menu {
-    display: none;
-}
-
-.inner_overlay_manu {
-    height: 600px;
-    width: 400px;
-    background-color: white;
-    border: solid black 2px;
-    border-radius: 25px;
-    cursor: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.menu-section_overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.menu-section_overlay p {
-    font-size: 24px;
-    color: grey;
-    cursor: pointer;
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-.menu-section_overlay p:hover {
-    color: black;
-    text-decoration: underline;
-}
-
-.close_button_overlay_menu {
-    height: 24px;
-    width: 24px;
-    transform: scale(1);
-    cursor: pointer;
-    margin-top: 24px;
-}
-
-.close_button_overlay_menu:hover {
-    transform: scale(1.2);
-}
-
-.menu-section span {
-    font-size: 20px;
-}
-
-.circled_menu_button {
-    border: black solid 2px;
-    border-radius: 25px;
-    padding: 6px;
-    background-color: #cccccc81;
-}
-
-.display_location {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.615);
-    z-index: 2000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.d_none_location {
-    display: none;
-}
-
-.inner_overlay_location {
-    height: 600px;
-    width: 400px;
-    background-color: white;
-    border: solid black 2px;
-    border-radius: 25px;
-    cursor: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    cursor: auto;
-    padding-bottom: 10px;
-}
-.google_maps{
-    width: 390px;
-    height: 500px;
-    border: solid grey 2px;
-    border-radius: 25px;
-    margin-top: 4px;
-}
-.close_button_overlay_location {
-    height: 24px;
-    width: 24px;
-    transform: scale(1);
-    cursor: pointer;
-}
-
-.close_button_overlay_location:hover {
-    transform: scale(1.2);
-}
-.address_overlay{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.display_about_us{
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.615);
-    z-index: 2000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-.inner_overlay_about_us{
-    height: 600px;
-    width: 400px;
-    background-color: white;
-    border: solid black 2px;
-    border-radius: 25px;
-    cursor: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    cursor: auto;
-}
-
-.d_none_about_us{
-    display:  none;
-}
-.d_none_menu_button{
-    display: none;
-}
-.text_align_end{
-    text-align: end;
-}

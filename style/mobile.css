@@ -92,6 +92,14 @@
         margin-top: 0;
         margin-bottom: 0;
     }
+    .drinks_div p{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .specials_div p{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
     .aot_title_section {
         display: flex;

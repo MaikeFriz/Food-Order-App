@@ -1,128 +1,3 @@
-function renderStarter() {
-    let displayStarters = document.getElementById('display_starters');
-    displayStarters.innerHTML = "";
-    for (let indexStarter = 0; indexStarter < myStarters.length; indexStarter++) {
-        displayStarters.innerHTML += templateDisplayStarters(indexStarter);
-    }
-}
-
-function templateDisplayStarters(indexStarter) {
-    let starter = myStarters[indexStarter];
-    return `
-<div class="organise_single_dives_dishes">
-    <div class="single_divs_dishes">
-        <h2 class="title_dish">${starter.name}</h2>
-        <p class="price_dish">${starter.price} €</p>
-        <p class="description_dish">${starter.description}</p>
-    </div>
-    <div class="div_add_symbol">
-        <img onclick="pushStartersToBasket(${indexStarter})" class="img_add_symbol" src="./assets/imgs/add_symbol.png">
-    </div>
-    <img class="displayed_images_dishes" src="${starter.image}">
-</div>
-    `
-}
-
-function renderMainDishes() {
-    let displayMainDishes = document.getElementById('display_main_dishes');
-    displayMainDishes.innerHTML = "";
-    for (let indexMain = 0; indexMain < myMainDishes.length; indexMain++) {
-        displayMainDishes.innerHTML += templateDisplayMainDishes(indexMain);
-    }
-}
-
-function templateDisplayMainDishes(indexMain) {
-    let mainDishes = myMainDishes[indexMain];
-    return `
-<div class="organise_single_dives_dishes">
-    <div class="single_divs_dishes">
-        <h2 class="title_dish">${mainDishes.name}</h2>
-        <p class="price_dish">${mainDishes.price} €</p>
-        <p class="description_dish">${mainDishes.description}</p>
-    </div>
-    <div class="div_add_symbol">
-        <img onclick="pushMainDishesTobasket(${indexMain})" class="img_add_symbol" src="./assets/imgs/add_symbol.png">
-    </div>
-    <img class="displayed_images_dishes" src="${mainDishes.image}">
-</div>
-    `
-}
-
-function renderDesserts() {
-    let displayDesserts = document.getElementById('display_desserts');
-    displayDesserts.innerHTML = "";
-    for (let indexDessert = 0; indexDessert < myDesserts.length; indexDessert++) {
-        displayDesserts.innerHTML += templateDisplayDesserts(indexDessert);
-    }
-}
-
-function templateDisplayDesserts(indexDessert) {
-    let dessert = myDesserts[indexDessert];
-    return `
-<div class="organise_single_dives_dishes">
-    <div class="single_divs_dishes">
-        <h2 class="title_dish">${dessert.name}</h2>
-        <p class="price_dish">${dessert.price} €</p>
-        <p class="description_dish">${dessert.description}</p>
-    </div>
-    <div class="div_add_symbol">
-        <img onclick ="pushDessertsTobasket(${indexDessert})" class="img_add_symbol" src="./assets/imgs/add_symbol.png">
-    </div>    
-    <img class="displayed_images_dishes" src="${dessert.image}">
-</div>
-    `
-}
-
-function renderDrinks() {
-    let displayDrinks = document.getElementById('display_drinks');
-    displayDrinks.innerHTML = "";
-    for (let indexDrink = 0; indexDrink < myDrinks.length; indexDrink++) {
-        displayDrinks.innerHTML += templateDisplayDrinks(indexDrink);
-    }
-}
-
-function templateDisplayDrinks(indexDrink) {
-    let drink = myDrinks[indexDrink];
-    return `
-<div class="organise_single_dives_dishes">
-    <div class="single_divs_dishes">
-        <h2 class="title_dish">${drink.name}</h2>
-        <p class="price_dish">${drink.price} €</p>
-        <p class="description_dish">${drink.description}</p>
-    </div>
-    <div class="div_add_symbol">
-        <img onclick="pushDrinkToBasket(${indexDrink})" class="img_add_symbol" src="./assets/imgs/add_symbol.png">
-    </div>    
-    <img class="displayed_images_dishes" src="${drink.image}">
-</div>
-    `
-}
-
-function renderSpecials() {
-    let displaySpecials = document.getElementById('display_specials');
-    displaySpecials.innerHTML = "";
-    for (let indexSpecial = 0; indexSpecial < mySpecials.length; indexSpecial++) {
-        displaySpecials.innerHTML += templateDisplaySpecials(indexSpecial);
-    }
-}
-
-function templateDisplaySpecials(indexSpecial) {
-    let special = mySpecials[indexSpecial];
-    return `
-<div class="organise_single_dives_dishes">
-    <div class="single_divs_dishes">
-        <h2 class="title_dish">${special.name}</h2>
-        <p class="price_dish">${special.price} €</p>
-        <p class="description_dish">${special.description}</p>
-    </div>
-    <div class="div_add_symbol">
-        <img onclick="pushSpecialToBasket(${indexSpecial})" class="img_add_symbol" src="./assets/imgs/add_symbol.png">
-    </div>    
-    <img class="displayed_images_dishes" src="${special.image}">
-</div>
-    `
-}
-
 function renderBasket() {
     let basket = document.getElementById('display_content_basket');
     let subtotalDiv = document.getElementById('subtotal');
@@ -137,13 +12,14 @@ function renderBasket() {
     basket.innerHTML = '';
   
     if (myBasket.length === 0) {
-      subtotalDiv.innerHTML = '<p>0.00 €</p>';
+      subtotalDiv.innerHTML = ``;
       basket.innerHTML = `
         <div class="message_basket_empty">
           <span class="material-symbols-outlined">shopping_basket</span>
           <p class="message_basket_empty"><i>Ihr Warenkorb ist leer. <br> Fügen Sie Ihre Bestellung hinzu.</i></p>
         </div>
-      `;
+      `
+      ;
     } else {
       for (let indexBasket = 0; indexBasket < myBasket.length; indexBasket++) {
         let dish = myBasket[indexBasket];
