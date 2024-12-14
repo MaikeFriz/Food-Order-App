@@ -24,7 +24,7 @@
     background-color: white;
     border: solid 2px black;
     border-radius: 10px;
-    overflow-x: hidden;
+    overflow: hidden;
     cursor: auto;
     padding: 0 8px;
 }
@@ -62,7 +62,7 @@
 .family_img {
     object-fit: cover;
     width: 100%;
-    height: 218px;
+    height: 242px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     margin-top: 8px;

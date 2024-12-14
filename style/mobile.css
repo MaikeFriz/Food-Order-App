@@ -141,13 +141,22 @@
         max-height: 480px;
         min-height: 480px;
     }
+    .order_button{
+        margin: 12px;
+    }
+    .display_content_basket{
+        min-height: 150px;
+        max-height: 150px;
+        overflow-y: scroll;
+    }
     
     .inner_overlay_about_us{
-        margin-left: 40px !important;
-        margin-right: 40px !important;
+        margin-left: 40px;
+        margin-right: 40px;
         max-height: 480px;
         min-height: 480px;
-        width: auto;
+        min-width: 300px;
+        max-width: 300px;
     }
     .mobile_overflow_scroll{
         height: auto;
@@ -180,6 +189,8 @@
         margin-right: 40px;
         max-height: 480px;
         min-height: 480px;
+        min-width: 300px;
+        max-width: 300px;
     }
 
     .inner_overlay_location{
@@ -187,10 +198,17 @@
         margin-right: 40px;
         max-height: 480px;
         min-height: 480px;
+        min-width: 300px;
+        max-width: 300px;
+    }
+    .inner_overlay_location p{
+        font-size: 14px;
+        text-align: center;
     }
 
     .google_maps{
-        width: fit-content;
+        min-width: 290px;
+        max-width: 290px;
     }
 
     .description_dish {
@@ -241,5 +259,43 @@
     .displayed_images_dishes {
         max-width: 150px !important;
         min-width: 150px !important;
+    }
+    .inner_overlay_location{
+        margin-left: 40px;
+        margin-right: 40px;
+        max-height: 480px;
+        min-height: 480px;
+        min-width: 250px;
+        max-width: 250px;
+    }
+
+    .google_maps{
+        min-width: 240px;
+        max-width: 240px;
+    }
+    .inner_overlay_about_us{
+        margin-left: 40px;
+        margin-right: 40px;
+        max-height: 480px;
+        min-height: 480px;
+        min-width: 250px;
+        max-width: 250px;
+    }
+
+    .inner_overlay_manu{
+        margin-left: 40px;
+        margin-right: 40px;
+        max-height: 480px;
+        min-height: 480px;
+        min-width: 250px;
+        max-width: 250px;
+    }
+    .background_display_basket_overlay {
+        margin-left: 40px;
+        margin-right: 40px;
+        max-height: 480px;
+        min-height: 480px;
+        min-width: 250px;
+        max-width: 250px;
     }
 }
