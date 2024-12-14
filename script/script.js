@@ -6,6 +6,7 @@ function init() {
     renderDrinks();
     renderSpecials();
     renderOrdersInBasketOverlay();
+    showAmountItemsBasket()
 }
 
 function toggleStarterDiv() {

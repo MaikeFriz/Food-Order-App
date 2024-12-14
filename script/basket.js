@@ -38,6 +38,7 @@ function renderBasket() {
   
       deliveryCostsDiv.innerHTML = `<p>${deliveryCosts.toFixed(2)} €</p>`;
     }
+    showAmountItemsBasket();
   }
 
 function templateDisplayBasket(dish, indexBasket, totalPrice) {
@@ -55,6 +56,24 @@ function templateDisplayBasket(dish, indexBasket, totalPrice) {
     `
 }
 
+function showAmountItemsBasket(){
+    let basketAmountArticlesRef = document.getElementById('basket_amount_articles');
+    let basketAmountArticlesSmallMobile = document.getElementById('basket_amount_articles_mobile_small');
+    let totalAmount = 0;
+
+    for(let i = 0; i < myBasket.length; i++){
+        totalAmount += myBasket[i].amount;
+    }
+
+    if (totalAmount === 0){
+        basketAmountArticlesRef.innerHTML = `<p>Warenkorb (0)</p>`
+        basketAmountArticlesSmallMobile.innerHTML = `<p>(0)</p>`
+    } else {
+        basketAmountArticlesRef.innerHTML = `<p>Warenkorb (${totalAmount})</p>`
+        basketAmountArticlesSmallMobile.innerHTML = `<p>(${totalAmount})</p>`
+    }
+  }
+
 function pushStartersToBasket(indexStarter) {
     let dishBasket = myStarters[indexStarter];
     let existingDishBasket = myBasket.find(basketDish => basketDish.name === dishBasket.name);
@@ -70,7 +89,8 @@ function pushStartersToBasket(indexStarter) {
         });
     }
     renderBasket();
-    renderOrdersInBasketOverlay()
+    renderOrdersInBasketOverlay();
+    showAmountItemsBasket();
 }
 
 function pushMainDishesTobasket(indexMain) {
@@ -87,7 +107,8 @@ function pushMainDishesTobasket(indexMain) {
         });
     }
     renderBasket();
-    renderOrdersInBasketOverlay()
+    renderOrdersInBasketOverlay();
+    showAmountItemsBasket();
 }
 
 function pushDessertsTobasket(indexDessert) {
@@ -104,7 +125,8 @@ function pushDessertsTobasket(indexDessert) {
         });
     }
     renderBasket();
-    renderOrdersInBasketOverlay()
+    renderOrdersInBasketOverlay();
+    showAmountItemsBasket();
 }
 
 function pushDrinkToBasket(indexDrink) {
@@ -121,7 +143,8 @@ function pushDrinkToBasket(indexDrink) {
         });
     }
     renderBasket();
-    renderOrdersInBasketOverlay()
+    renderOrdersInBasketOverlay();
+    showAmountItemsBasket();
 }
 
 function pushSpecialToBasket(indexSpecial) {
@@ -138,13 +161,15 @@ function pushSpecialToBasket(indexSpecial) {
         });
     }
     renderBasket();
-    renderOrdersInBasketOverlay()
+    renderOrdersInBasketOverlay();
+    showAmountItemsBasket();
 }
 
 function deleteFromBasket(indexBasket) {
     myBasket.splice(indexBasket, 1)
     renderBasket();
-    renderOrdersInBasketOverlay()
+    renderOrdersInBasketOverlay();
+    showAmountItemsBasket();
 }
 
 function adjustAmountItembasket(indexBasket, change) {
@@ -156,4 +181,5 @@ function adjustAmountItembasket(indexBasket, change) {
     }
     renderBasket();
     renderOrdersInBasketOverlay();
+    showAmountItemsBasket();
 }
