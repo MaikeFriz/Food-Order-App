@@ -10,9 +10,12 @@ function renderBasket() {
     let total = 0;
   
     basket.innerHTML = '';
-  
+
     if (myBasket.length === 0) {
-      subtotalDiv.innerHTML = ``;
+      subtotalDiv.innerHTML = ``;   //funktioniert nicht, warum?
+      totalRef.innerHTML = ``;
+      deliveryCostsDiv.innerHTML = ``;
+
       basket.innerHTML = `
         <div class="message_basket_empty">
           <span class="material-symbols-outlined">shopping_basket</span>

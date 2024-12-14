@@ -6,7 +6,14 @@ function init() {
     renderDrinks();
     renderSpecials();
     renderOrdersInBasketOverlay();
-    showAmountItemsBasket()
+    showAmountItemsBasket();
+    getStartersFromLocalStorage();
+    getMainDishesFromLocalStorage();
+    getDessertsFromLocalStorage();
+    getDrinksFromLocalStorage();
+    getSpecialsFromLocalStorage()
+    getBasketFromLocalStorage();
+    getRestaurantFromLocalStorage();
 }
 
 function toggleStarterDiv() {
@@ -150,6 +157,7 @@ function changeHeartStatus() {
     } else {
         heartImgRef.src = "./assets/imgs/like_heart_empty.png"
     }
+    saveRestaurantInLocalStorage();
 }
 
 function renderStarter() {
