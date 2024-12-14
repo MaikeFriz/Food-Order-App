@@ -109,6 +109,7 @@ function templateAboutUs() {
     <img onclick="closeAboutUs()" class="close_button_about_us" src="./assets/imgs/close_button_black.png">
     </div>
     <h2 class="h2_uber_uns">Über uns</h2>
+    <div class="mobile_overflow_scroll">
     <div class="padding_text">
         <p>Willkommen bei Giovanni's Pizzaria! Als <strong> Familienunternehmen in der dritten Generation
             </strong>stehen wir seit Jahrzehnten für authentische italienische Küche und herzliche Gastfreundschaft. Bei uns wird jede Pizza noch nach
@@ -123,6 +124,7 @@ function templateAboutUs() {
         <p>
             <strong> Wir freuen uns darauf, Sie bei uns willkommen zu heißen!</strong>
         </p>
+    </div>
     </div>
     <img class="family_img" src="./assets/imgs/restaurant.png">
 </div>

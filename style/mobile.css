@@ -138,21 +138,55 @@
     .background_display_basket_overlay {
         margin-left: 40px;
         margin-right: 40px;
+        max-height: 480px;
+        min-height: 480px;
     }
     
     .inner_overlay_about_us{
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 40px !important;
+        margin-right: 40px !important;
+        max-height: 480px;
+        min-height: 480px;
+        width: auto;
+    }
+    .mobile_overflow_scroll{
+        height: auto;
+        overflow-y: scroll;
+        height: fit-content;
+        padding-top: 20px;
+        width: auto;
+    }
+    .mobile_overflow_scroll::-webkit-scrollbar {
+        width: 12px;
+        max-height: 550px;
+    }
+    
+    .mobile_overflow_scroll::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+    }
+    
+    .mobile_overflow_scroll::-webkit-scrollbar-thumb {
+        background: rgba(128, 128, 128, 0.36);
+        border-radius: 10px;
+    }
+    
+    .mobile_overflow_scroll::-webkit-scrollbar-thumb:hover {
+        background: black;
     }
 
     .inner_overlay_manu{
         margin-left: 40px;
         margin-right: 40px;
+        max-height: 480px;
+        min-height: 480px;
     }
 
     .inner_overlay_location{
         margin-left: 40px;
         margin-right: 40px;
+        max-height: 480px;
+        min-height: 480px;
     }
 
     .google_maps{
