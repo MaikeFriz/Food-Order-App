@@ -42,22 +42,13 @@ function renderBasket() {
       deliveryCostsDiv.innerHTML = `<p>${deliveryCosts.toFixed(2)} €</p>`;
     }
     showAmountItemsBasket();
+    saveStartersInLocalStorage();
+    saveMainDishesInLocalStorage();
+    saveDessertsInLocalStorage();
+    saveDrinksInLocalStorage();
+    saveSpecialsInLocalStorage();
+    saveBasketInLocalStorage();
   }
-
-function templateDisplayBasket(dish, indexBasket, totalPrice) {
-    return `
-<h3 class="name_dish_basket">${dish.name}</h3>
-<div class="basket_item_in_line">
-    <div class="add_reduce_amount_dish_basket">
-        <img onclick="adjustAmountItembasket(${indexBasket}, -1)" class="reduce_symbol_basket" src="./assets/imgs/reduce_symbol_basket.png">
-        <p class="amount_number_basket">${dish.amount}</p>
-        <img onclick="adjustAmountItembasket(${indexBasket}, +1)" class="add_symbol_basket" src="./assets/imgs/add_symbol_basket.png">
-    </div>
-  <p id="price_basket_item${indexBasket}" class="price_basket">${totalPrice.toFixed(2)} €</p>
-    <p onclick="deleteFromBasket(${indexBasket})" class="delete_symbol_basket"><span class="material-symbols-outlined">delete</span></p>
-</div>
-    `
-}
 
 function showAmountItemsBasket(){
     let basketAmountArticlesRef = document.getElementById('basket_amount_articles');
@@ -94,6 +85,12 @@ function pushStartersToBasket(indexStarter) {
     renderBasket();
     renderOrdersInBasketOverlay();
     showAmountItemsBasket();
+    saveStartersInLocalStorage();
+    saveMainDishesInLocalStorage();
+    saveDessertsInLocalStorage();
+    saveDrinksInLocalStorage();
+    saveSpecialsInLocalStorage();
+    saveBasketInLocalStorage();
 }
 
 function pushMainDishesTobasket(indexMain) {
@@ -112,6 +109,12 @@ function pushMainDishesTobasket(indexMain) {
     renderBasket();
     renderOrdersInBasketOverlay();
     showAmountItemsBasket();
+    saveStartersInLocalStorage();
+    saveMainDishesInLocalStorage();
+    saveDessertsInLocalStorage();
+    saveDrinksInLocalStorage();
+    saveSpecialsInLocalStorage();
+    saveBasketInLocalStorage();
 }
 
 function pushDessertsTobasket(indexDessert) {
@@ -130,6 +133,12 @@ function pushDessertsTobasket(indexDessert) {
     renderBasket();
     renderOrdersInBasketOverlay();
     showAmountItemsBasket();
+    saveStartersInLocalStorage();
+    saveMainDishesInLocalStorage();
+    saveDessertsInLocalStorage();
+    saveDrinksInLocalStorage();
+    saveSpecialsInLocalStorage();
+    saveBasketInLocalStorage();
 }
 
 function pushDrinkToBasket(indexDrink) {
@@ -148,6 +157,12 @@ function pushDrinkToBasket(indexDrink) {
     renderBasket();
     renderOrdersInBasketOverlay();
     showAmountItemsBasket();
+    saveStartersInLocalStorage();
+    saveMainDishesInLocalStorage();
+    saveDessertsInLocalStorage();
+    saveDrinksInLocalStorage();
+    saveSpecialsInLocalStorage();
+    saveBasketInLocalStorage();
 }
 
 function pushSpecialToBasket(indexSpecial) {
@@ -166,6 +181,12 @@ function pushSpecialToBasket(indexSpecial) {
     renderBasket();
     renderOrdersInBasketOverlay();
     showAmountItemsBasket();
+    saveStartersInLocalStorage();
+    saveMainDishesInLocalStorage();
+    saveDessertsInLocalStorage();
+    saveDrinksInLocalStorage();
+    saveSpecialsInLocalStorage();
+    saveBasketInLocalStorage();
 }
 
 function deleteFromBasket(indexBasket) {
@@ -185,4 +206,10 @@ function adjustAmountItembasket(indexBasket, change) {
     renderBasket();
     renderOrdersInBasketOverlay();
     showAmountItemsBasket();
+    saveStartersInLocalStorage();
+    saveMainDishesInLocalStorage();
+    saveDessertsInLocalStorage();
+    saveDrinksInLocalStorage();
+    saveSpecialsInLocalStorage();
+    saveBasketInLocalStorage();
 }

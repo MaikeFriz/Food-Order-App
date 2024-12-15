@@ -5,70 +5,6 @@ function openBasket(){
     renderOrdersInBasketOverlay();
 }
 
-function templateBasketOverlay() {
-    return `
-<div onclick=" bubblingPrevention(event)" class="background_display_basket_overlay">
-    <div class="basket">
-        <div class="toggle_swich-div">
-            <div class="toggle_swich">
-                <label class="switch">
-                    <input onchange="renderBasket()" id="swich_input" type="checkbox">
-                    <span class="slider">
-                        <!-- Links -->
-                        <div id="slider-content left" class="slider-content left">
-                            <i class="fas fa-store"></i>
-                            <span class="text">
-                                <span class="material-symbols-outlined">shopping_bag</span>
-                                <div>
-                                    <p class="bigger_font">Abholung</p>
-                                    <p>20-30min</p>
-                                </div>
-                            </span>
-                        </div>
-                        <!-- Rechts -->
-                        <div id="slider-content right" class="slider-content right">
-                            <i class="fas fa-truck"></i>
-                            <span class="text">
-                                <span class="material-symbols-outlined">local_shipping</span>
-                                <div>
-                                    <p class="bigger_font">Lieferung</p>
-                                    <p>30-45min</p>
-                                </div>
-                            </span>
-                        </div>
-                        <!-- Knob -->
-                        <span class="knob"></span>
-                    </span>
-                </label>
-            </div>
-        </div>
-        <h2 class="title_basket">Warenkorb</h2>
-        <div id="display_content_basket" class="display_content_basket"></div>
-        <div class="basket_total_cost_calculation">
-            <div>
-                <p>Zwischensumme:</p>
-                <p>Lieferkosten:</p>
-                <p><strong>Gesamt:</strong></p>
-            </div>
-            <div class="text_align_end">
-                <p id="subtotal"></p>
-                <p id="delivery_costs"></p>
-                <p id="total"></p>
-            </div>
-        </div>
-        <div class="order_button_div">
-            <a href="./successfull_order.html">
-                <p class="order_button">Jetzt bestellen</p>
-            </a>
-        </div>
-        <div class="div_close_button_overlay_basket">
-            <img onclick="closeBasket()" class="close_button_overlay_basket" src="./assets/imgs/close_button_black.png">
-        </div>
-    </div>
-</div>
-    `;
-}
-
 function closeBasket(){
     let overlayDiv = document.getElementById('overlay_div');
     overlayDiv.classList.add('d_none_overlay');
@@ -117,4 +53,10 @@ function renderOrdersInBasketOverlay(){
   
       deliveryCostsDiv.innerHTML = `<p>${deliveryCosts.toFixed(2)} €</p>`;
     }
+    saveStartersInLocalStorage();
+    saveMainDishesInLocalStorage();
+    saveDessertsInLocalStorage();
+    saveDrinksInLocalStorage();
+    saveSpecialsInLocalStorage();
+    saveBasketInLocalStorage();
 }
