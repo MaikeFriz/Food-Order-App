@@ -289,3 +289,92 @@
 .text_align_end {
     text-align: end;
 }
+
+.overlay_info {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.615);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden !important;
+}
+
+.d_none_overlay_info {
+    display: none;
+}
+
+.inner_overlay_info_starter, .inner_overlay_info_main, .inner_overlay_info_dessert, .inner_overlay_info_drinks, .inner_overlay_info_specials {
+    height: 600px;
+    width: 400px;
+    background-color: white;
+    border: solid black 2px;
+    border-radius: 25px;
+    cursor: auto;
+    display: flex;
+    flex-direction: column;
+    cursor: auto;
+    padding: 16px;
+}
+
+.inner_overlay_info_starter h2, .inner_overlay_info_main h2, .inner_overlay_info_dessert h2, .inner_overlay_info_drinks h2, .inner_overlay_info_specials h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.inner_overlay_info_starter h3, .inner_overlay_info_main h3, .inner_overlay_info_dessert h3, .inner_overlay_info_drinks h3, .inner_overlay_info_specials h3 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.inner_overlay_info_starter h4, .inner_overlay_info_main h4, .inner_overlay_info_dessert h4, .inner_overlay_info_drinks h4, .inner_overlay_info_specials h4 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.close_button_info{
+    height: 20px;
+    width: auto;
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.close_button_info:hover {
+    transform: scale(1.05);
+}
+.title-section_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+    position: sticky;
+}
+.info_info_overlay{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 16px;
+}
+.info_info_overlay::-webkit-scrollbar {
+    width: 12px;
+    max-height: 550px;
+}
+
+.info_info_overlay::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+.info_info_overlay::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.36);
+    border-radius: 10px;
+}
+
+.info_info_overlay::-webkit-scrollbar-thumb:hover {
+    background: black;
+}

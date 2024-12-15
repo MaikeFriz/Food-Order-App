@@ -141,6 +141,12 @@
         max-height: 480px;
         min-height: 480px;
     }
+    .inner_overlay_info_starter, .inner_overlay_info_main, .inner_overlay_info_dessert, .inner_overlay_info_drinks, .inner_overlay_info_specials{
+        margin-left: 40px;
+        margin-right: 40px;
+        max-height: 480px;
+        min-height: 480px;
+    }
     .order_button{
         margin: 12px;
     }
