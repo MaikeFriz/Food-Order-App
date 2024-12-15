@@ -15,6 +15,7 @@ function init() {
     renderSpecials();
     renderOrdersInBasketOverlay();
     showAmountItemsBasket();
+    renderHeartStatus();
 }
 
 function toggleStarterDiv() {
@@ -86,15 +87,19 @@ function bubblingPreventionAboutUs(event) {
     event.stopPropagation();
 }
 
-function changeHeartStatus() {
+function renderHeartStatus() {
     let heartImgRef = document.getElementById(`like_heart`);
-    myRestaurant[0].liked = !myRestaurant[0].liked;
     if (myRestaurant[0].liked === true) {
         heartImgRef.src = "./assets/imgs/like_heart_full.png";
     } else {
         heartImgRef.src = "./assets/imgs/like_heart_empty.png"
     }
-    saveRestaurantInLocalStorage();
+}
+
+function changeHeartStatus() {
+    myRestaurant[0].liked = !myRestaurant[0].liked; 
+    saveRestaurantInLocalStorage(); 
+    renderHeartStatus(); 
 }
 
 function renderStarter() {
@@ -143,25 +148,25 @@ function renderInfoOverlay(indexStarter) {
     overlayInfo.innerHTML = templateProductInfoStarter(indexStarter);
 }
 
-function renderInfoOverlayMains(indexMain){
+function renderInfoOverlayMains(indexMain) {
     let overlayInfo = document.getElementById('overlay_info');
     overlayInfo.classList.remove('d_none_overlay_info');
     overlayInfo.innerHTML = templateProductInfoMainDishes(indexMain);
 }
 
-function renderInfoOverlayDesserts(indexDessert){
+function renderInfoOverlayDesserts(indexDessert) {
     let overlayInfo = document.getElementById('overlay_info');
     overlayInfo.classList.remove('d_none_overlay_info');
     overlayInfo.innerHTML = templateProductInfoDesserts(indexDessert);
 }
 
-function renderInfoOverlayDrinks(indexDrink){
+function renderInfoOverlayDrinks(indexDrink) {
     let overlayInfo = document.getElementById('overlay_info');
     overlayInfo.classList.remove('d_none_overlay_info');
     overlayInfo.innerHTML = templateProductInfoDrinks(indexDrink);
 }
 
-function renderInfoOverlaySpecials(indexSpecial){
+function renderInfoOverlaySpecials(indexSpecial) {
     let overlayInfo = document.getElementById('overlay_info');
     overlayInfo.classList.remove('d_none_overlay_info');
     overlayInfo.innerHTML = templateProductInfoSpecials(indexSpecial);

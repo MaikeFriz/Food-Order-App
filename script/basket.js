@@ -4,47 +4,36 @@ function renderBasket() {
     let deliveryCostsDiv = document.getElementById('delivery_costs');
     let slider = document.getElementById('swich_input');
     let totalRef = document.getElementById('total');
-    // let oderButton = document.getElementById('order_button_div');
-
-  
     let subtotal = 0;
     let deliveryCosts = 0;
     let total = 0;
-  
+
     basket.innerHTML = '';
-
     if (myBasket.length === 0) {
-      subtotalDiv.innerHTML = ``;   //funktioniert nicht, warum?
-      totalRef.innerHTML = ``;
-      deliveryCostsDiv.innerHTML = ``;
-      // oderButton.onclick = alert('Bitte fugen Sie zuerst Ihre bestellung hinzu.')
-
-      basket.innerHTML = `
+        subtotalDiv.innerHTML = ``; //funktioniert nicht, warum?  
+        totalRef.innerHTML = ``;
+        deliveryCostsDiv.innerHTML = ``;
+        basket.innerHTML = `
         <div class="message_basket_empty">
           <span class="material-symbols-outlined">shopping_basket</span>
           <p class="message_basket_empty"><i>Ihr Warenkorb ist leer. <br> Fügen Sie Ihre Bestellung hinzu.</i></p>
         </div>
       `
-      ;
+            ;
     } else {
-      for (let indexBasket = 0; indexBasket < myBasket.length; indexBasket++) {
-        let dish = myBasket[indexBasket];
-        let totalPrice = dish.price * dish.amount;
-        subtotal += totalPrice;
-        subtotalDiv.innerHTML = `<p>${subtotal.toFixed(2)} €</p>`;
-        basket.innerHTML += templateDisplayBasket(dish, indexBasket, totalPrice);
-        // oderButton.window.location.href = 
-
-      }
-  
-      if (slider.checked) {
-        deliveryCosts = 5.99;
-      }
-  
-      total = subtotal + deliveryCosts;
-      totalRef.innerHTML = `<p><strong>${total.toFixed(2)}€</strong></p>`;
-  
-      deliveryCostsDiv.innerHTML = `<p>${deliveryCosts.toFixed(2)} €</p>`;
+        for (let indexBasket = 0; indexBasket < myBasket.length; indexBasket++) {
+            let dish = myBasket[indexBasket];
+            let totalPrice = dish.price * dish.amount;
+            subtotal += totalPrice;
+            subtotalDiv.innerHTML = `<p>${subtotal.toFixed(2)} €</p>`;
+            basket.innerHTML += templateDisplayBasket(dish, indexBasket, totalPrice);
+        }
+        if (slider.checked) {
+            deliveryCosts = 5.99;
+        }
+        total = subtotal + deliveryCosts;
+        totalRef.innerHTML = `<p><strong>${total.toFixed(2)}€</strong></p>`;
+        deliveryCostsDiv.innerHTML = `<p>${deliveryCosts.toFixed(2)} €</p>`;
     }
     showAmountItemsBasket();
     saveStartersInLocalStorage();
@@ -53,34 +42,34 @@ function renderBasket() {
     saveDrinksInLocalStorage();
     saveSpecialsInLocalStorage();
     saveBasketInLocalStorage();
-  }
+}
 
-  function sendOrder(){
+function sendOrder() {
     let order = document.getElementById('order_button_div');
-    if (myBasket.length === 0){
+    if (myBasket.length === 0) {
         order.onclick = alert('Bitte geben Sie zuerst Ihre Bestellung auf.');
     } else {
         window.location.href = "./successfull_order.html";
     }
-  }
+}
 
-function showAmountItemsBasket(){
+function showAmountItemsBasket() {
     let basketAmountArticlesRef = document.getElementById('basket_amount_articles');
     let basketAmountArticlesSmallMobile = document.getElementById('basket_amount_articles_mobile_small');
     let totalAmount = 0;
 
-    for(let i = 0; i < myBasket.length; i++){
+    for (let i = 0; i < myBasket.length; i++) {
         totalAmount += myBasket[i].amount;
     }
 
-    if (totalAmount === 0){
+    if (totalAmount === 0) {
         basketAmountArticlesRef.innerHTML = `<p>Warenkorb (0)</p>`
         basketAmountArticlesSmallMobile.innerHTML = `<p>(0)</p>`
     } else {
         basketAmountArticlesRef.innerHTML = `<p>Warenkorb (${totalAmount})</p>`
         basketAmountArticlesSmallMobile.innerHTML = `<p>(${totalAmount})</p>`
     }
-  }
+}
 
 function pushStartersToBasket(indexStarter) {
     let dishBasket = myStarters[indexStarter];
