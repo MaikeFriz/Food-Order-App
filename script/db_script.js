@@ -1,6 +1,6 @@
  let myStarters = [
     {
-        "name": "Pizzabrötchen",
+        "name": "Pizzabrot",
         "price": 7.99,
         "description": "Frisch gebackenes, knuspriges Pizzabrot, verfeinert mit aromatischem Olivenöl und duftenden Kräutern.",
         "image": "./assets/imgs/pizza_bread.png",
@@ -139,7 +139,7 @@ let myDesserts = [
         ],
     },
     {
-        "name": "Cheesecake",
+        "name": "Kuchen",
         "price": 7.99,
         "description": "Samtiger Cheesecake auf einem knusprigen Keksboden, veredelt mit einer fruchtigen Beerensauce oder einem Hauch von Zitronenzeste.",
         "image": "./assets/imgs/cheesecake.png",

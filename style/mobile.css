@@ -92,11 +92,13 @@
         margin-top: 0;
         margin-bottom: 0;
     }
-    .drinks_div p{
+
+    .drinks_div p {
         margin-top: 0;
         margin-bottom: 0;
     }
-    .specials_div p{
+
+    .specials_div p {
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -134,6 +136,23 @@
     }
 }
 
+@media(max-width:605px) {
+    .description_dish {
+        font-size: 10px;
+    }
+}
+@media(max-width:560px) {
+    .description_dish {
+        display: none;
+    }
+    .d_none_info{
+        display: block;
+    }
+    .productinfo_original{
+        display: none;
+    }
+}
+
 @media(max-width:530px) {
     .background_display_basket_overlay {
         margin-left: 40px;
@@ -141,22 +160,29 @@
         max-height: 480px;
         min-height: 480px;
     }
-    .inner_overlay_info_starter, .inner_overlay_info_main, .inner_overlay_info_dessert, .inner_overlay_info_drinks, .inner_overlay_info_specials{
+
+    .inner_overlay_info_starter,
+    .inner_overlay_info_main,
+    .inner_overlay_info_dessert,
+    .inner_overlay_info_drinks,
+    .inner_overlay_info_specials {
         margin-left: 40px;
         margin-right: 40px;
         max-height: 480px;
         min-height: 480px;
     }
-    .order_button{
+
+    .order_button {
         margin: 12px;
     }
-    .display_content_basket{
+
+    .display_content_basket {
         min-height: 150px;
         max-height: 150px;
         overflow-y: scroll;
     }
-    
-    .inner_overlay_about_us{
+
+    .inner_overlay_about_us {
         margin-left: 40px;
         margin-right: 40px;
         max-height: 480px;
@@ -164,33 +190,35 @@
         min-width: 300px;
         max-width: 300px;
     }
-    .mobile_overflow_scroll{
+
+    .mobile_overflow_scroll {
         height: auto;
         overflow-y: scroll;
         height: fit-content;
         padding-top: 20px;
         width: auto;
     }
+
     .mobile_overflow_scroll::-webkit-scrollbar {
         width: 12px;
         max-height: 550px;
     }
-    
+
     .mobile_overflow_scroll::-webkit-scrollbar-track {
         box-shadow: inset 0 0 5px grey;
         border-radius: 10px;
     }
-    
+
     .mobile_overflow_scroll::-webkit-scrollbar-thumb {
         background: rgba(128, 128, 128, 0.36);
         border-radius: 10px;
     }
-    
+
     .mobile_overflow_scroll::-webkit-scrollbar-thumb:hover {
         background: black;
     }
 
-    .inner_overlay_manu{
+    .inner_overlay_manu {
         margin-left: 40px;
         margin-right: 40px;
         max-height: 480px;
@@ -199,7 +227,7 @@
         max-width: 300px;
     }
 
-    .inner_overlay_location{
+    .inner_overlay_location {
         margin-left: 40px;
         margin-right: 40px;
         max-height: 480px;
@@ -207,18 +235,15 @@
         min-width: 300px;
         max-width: 300px;
     }
-    .inner_overlay_location p{
+
+    .inner_overlay_location p {
         font-size: 14px;
         text-align: center;
     }
 
-    .google_maps{
+    .google_maps {
         min-width: 290px;
         max-width: 290px;
-    }
-
-    .description_dish {
-        display: none;
     }
 
     .steinofen_img {
@@ -266,7 +291,8 @@
         max-width: 150px !important;
         min-width: 150px !important;
     }
-    .inner_overlay_location{
+
+    .inner_overlay_location {
         margin-left: 40px;
         margin-right: 40px;
         max-height: 480px;
@@ -275,11 +301,12 @@
         max-width: 250px;
     }
 
-    .google_maps{
+    .google_maps {
         min-width: 240px;
         max-width: 240px;
     }
-    .inner_overlay_about_us{
+
+    .inner_overlay_about_us {
         margin-left: 40px;
         margin-right: 40px;
         max-height: 480px;
@@ -288,7 +315,7 @@
         max-width: 250px;
     }
 
-    .inner_overlay_manu{
+    .inner_overlay_manu {
         margin-left: 40px;
         margin-right: 40px;
         max-height: 480px;
@@ -296,6 +323,7 @@
         min-width: 250px;
         max-width: 250px;
     }
+
     .background_display_basket_overlay {
         margin-left: 40px;
         margin-right: 40px;

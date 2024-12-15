@@ -69,10 +69,11 @@ function templateDisplayStarters(indexStarter) {
     <div class="single_divs_dishes">
         <div class="title_productinfo">
             <h2 class="title_dish">${starter.name}</h2> 
-            <p onclick="renderInfoOverlay(${indexStarter})" class="produktinfo">Produktinfo</p>
+            <p onclick="renderInfoOverlay(${indexStarter})" class="produktinfo productinfo_original">Produktinfo</p>
         </div>
         <p class="price_dish">${starter.price} €</p>
         <p class="description_dish">${starter.description}</p>
+        <p onclick="renderInfoOverlay(${indexStarter})" class="produktinfo d_none_info">Produktinfo</p>
     </div>
     <div class="div_add_symbol">
         <img onclick="pushStartersToBasket(${indexStarter})" class="img_add_symbol" src="./assets/imgs/add_symbol.png">
@@ -89,10 +90,11 @@ function templateDisplayMainDishes(indexMain) {
     <div class="single_divs_dishes">
         <div class="title_productinfo">
             <h2 class="title_dish">${mainDishes.name}</h2> 
-            <p onclick="renderInfoOverlayMains(${indexMain})" class="produktinfo">Produktinfo</p>
+            <p onclick="renderInfoOverlayMains(${indexMain})" class="produktinfo productinfo_original">Produktinfo</p>
         </div>
         <p class="price_dish">${mainDishes.price} €</p>
         <p class="description_dish">${mainDishes.description}</p>
+        <p onclick="renderInfoOverlayMains(${indexMain})" class="produktinfo d_none_info">Produktinfo</p>
     </div>
     <div class="div_add_symbol">
         <img onclick="pushMainDishesTobasket(${indexMain})" class="img_add_symbol" src="./assets/imgs/add_symbol.png">
@@ -109,10 +111,11 @@ function templateDisplayDesserts(indexDessert) {
     <div class="single_divs_dishes">
         <div class="title_productinfo">
             <h2 class="title_dish">${dessert.name}</h2> 
-            <p onclick="renderInfoOverlayDesserts(${indexDessert})" class="produktinfo">Produktinfo</p>
+            <p onclick="renderInfoOverlayDesserts(${indexDessert})" class="produktinfo productinfo_original">Produktinfo</p>
         </div>
         <p class="price_dish">${dessert.price} €</p>
         <p class="description_dish">${dessert.description}</p>
+        <p onclick="renderInfoOverlayDesserts(${indexDessert})" class="produktinfo d_none_info">Produktinfo</p>
     </div>
     <div class="div_add_symbol">
         <img onclick ="pushDessertsTobasket(${indexDessert})" class="img_add_symbol" src="./assets/imgs/add_symbol.png">
@@ -129,10 +132,11 @@ function templateDisplayDrinks(indexDrink) {
     <div class="single_divs_dishes">
         <div class="title_productinfo">
             <h2 class="title_dish">${drink.name}</h2> 
-            <p onclick="renderInfoOverlayDrinks(${indexDrink})" class="produktinfo">Produktinfo</p>
+            <p onclick="renderInfoOverlayDrinks(${indexDrink})" class="produktinfo productinfo_original">Produktinfo</p>
         </div>
         <p class="price_dish">${drink.price} €</p>
         <p class="description_dish">${drink.description}</p>
+        <p onclick="renderInfoOverlayDrinks(${indexDrink})" class="produktinfo d_none_info">Produktinfo</p>
     </div>
     <div class="div_add_symbol">
         <img onclick="pushDrinkToBasket(${indexDrink})" class="img_add_symbol" src="./assets/imgs/add_symbol.png">
@@ -149,14 +153,16 @@ function templateDisplaySpecials(indexSpecial) {
     <div class="single_divs_dishes">
         <div class="title_productinfo">
             <h2 class="title_dish">${special.name}</h2> 
-            <p onclick="renderInfoOverlaySpecials(${indexSpecial})" class="produktinfo">Produktinfo</p>
+            <p onclick="renderInfoOverlaySpecials(${indexSpecial})" class="produktinfo productinfo_original">Produktinfo</p>
         </div>
         <p class="price_dish">${special.price} €</p>
         <p class="description_dish">${special.description}</p>
+        <p onclick="renderInfoOverlaySpecials(${indexSpecial})" class="produktinfo d_none_info">Produktinfo</p>
+
     </div>
     <div class="div_add_symbol">
         <img onclick="pushSpecialToBasket(${indexSpecial})" class="img_add_symbol" src="./assets/imgs/add_symbol.png">
-    </div>    
+    </div>   
     <img class="displayed_images_dishes" src="${special.image}">
 </div>
     `
