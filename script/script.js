@@ -143,56 +143,10 @@ function renderInfoOverlay(indexStarter) {
     overlayInfo.innerHTML = templateProductInfoStarter(indexStarter);
 }
 
-function templateProductInfoStarter(indexStarter) {
-    return `
-    <div onclick="eventBubblingInfo(event)" id="inner_overlay_info_starter" class="inner_overlay_info_starter">
-        <div class="title-section_info">
-            <h2>Produktinfo</h2>
-            <img onclick="closeInfoOverlay()" class="close_button_info" src="./assets/imgs/close_button_black.png">
-        </div>
-        <div class="info_info_overlay">
-            <h3>${myStarters[indexStarter].name}</h3>
-            <p>${myStarters[indexStarter].info}</p>
-            <h4>Allergens</h4>
-            <ul>
-                ${myStarters[indexStarter].alergens.map(alergen => `<li>${alergen}</li>`).join('')}
-            </ul>
-                <h4>Additives</h4>
-            <ul>
-                ${myStarters[indexStarter].Additives.map(additive => `<li>${additive}</li>`).join('')}
-            </ul>
-        </div>
-    </div>
-    `
-}
-
 function renderInfoOverlayMains(indexMain){
     let overlayInfo = document.getElementById('overlay_info');
     overlayInfo.classList.remove('d_none_overlay_info');
     overlayInfo.innerHTML = templateProductInfoMainDishes(indexMain);
-}
-
-function templateProductInfoMainDishes(indexMain) {
-    return `
-    <div onclick="eventBubblingInfo(event)" id="inner_overlay_info_main" class="inner_overlay_info_main">
-        <div class="title-section_info">
-            <h2>Produktinfo</h2>
-            <img onclick="closeInfoOverlay()" class="close_button_info" src="./assets/imgs/close_button_black.png">
-        </div>
-        <div class="info_info_overlay">
-            <h3>${myMainDishes[indexMain].name}</h3>
-            <p>${myMainDishes[indexMain].info}</p>
-            <h4>Allergens</h4>
-            <ul>
-                ${myMainDishes[indexMain].alergens.map(alergen => `<li>${alergen}</li>`).join('')}
-            </ul>
-                <h4>Additives</h4>
-            <ul>
-                ${myMainDishes[indexMain].Additives.map(additive => `<li>${additive}</li>`).join('')}
-            </ul>
-        </div>
-    </div>
-    `
 }
 
 function renderInfoOverlayDesserts(indexDessert){
@@ -201,85 +155,16 @@ function renderInfoOverlayDesserts(indexDessert){
     overlayInfo.innerHTML = templateProductInfoDesserts(indexDessert);
 }
 
-function templateProductInfoDesserts(indexDessert) {
-    return `
-    <div onclick="eventBubblingInfo(event)" id="inner_overlay_info_dessert" class="inner_overlay_info_dessert">
-        <div class="title-section_info">
-            <h2>Produktinfo</h2>
-            <img onclick="closeInfoOverlay()" class="close_button_info" src="./assets/imgs/close_button_black.png">
-        </div>
-        <div class="info_info_overlay">
-            <h3>${myDesserts[indexDessert].name}</h3>
-            <p>${myDesserts[indexDessert].info}</p>
-            <h4>Allergens</h4>
-            <ul>
-                ${myDesserts[indexDessert].alergens.map(alergen => `<li>${alergen}</li>`).join('')}
-            </ul>
-                <h4>Additives</h4>
-            <ul>
-                ${myDesserts[indexDessert].Additives.map(additive => `<li>${additive}</li>`).join('')}
-            </ul>
-        </div>
-    </div>
-    `
-}
-
 function renderInfoOverlayDrinks(indexDrink){
     let overlayInfo = document.getElementById('overlay_info');
     overlayInfo.classList.remove('d_none_overlay_info');
     overlayInfo.innerHTML = templateProductInfoDrinks(indexDrink);
 }
 
-function templateProductInfoDrinks(indexDrink) {
-    return `
-    <div onclick="eventBubblingInfo(event)" id="inner_overlay_info_drinks" class="inner_overlay_info_drinks">
-        <div class="title-section_info">
-            <h2>Produktinfo</h2>
-            <img onclick="closeInfoOverlay()" class="close_button_info" src="./assets/imgs/close_button_black.png">
-        </div>
-        <div class="info_info_overlay">
-            <h3>${myDrinks[indexDrink].name}</h3>
-            <p>${myDrinks[indexDrink].info}</p>
-            <h4>Allergens</h4>
-            <ul>
-                ${myDrinks[indexDrink].alergens.map(alergen => `<li>${alergen}</li>`).join('')}
-            </ul>
-                <h4>Additives</h4>
-            <ul>
-                ${myDrinks[indexDrink].Additives.map(additive => `<li>${additive}</li>`).join('')}
-            </ul>
-        </div>
-    </div>
-    `
-}
-
 function renderInfoOverlaySpecials(indexSpecial){
     let overlayInfo = document.getElementById('overlay_info');
     overlayInfo.classList.remove('d_none_overlay_info');
     overlayInfo.innerHTML = templateProductInfoSpecials(indexSpecial);
-}
-
-function templateProductInfoSpecials(indexSpecial) {
-    return `
-    <div onclick="eventBubblingInfo(event)" id="inner_overlay_info_specials" class="inner_overlay_info_specials">
-        <div class="title-section_info">
-            <h2>Produktinfo</h2>
-            <img onclick="closeInfoOverlay()" class="close_button_info" src="./assets/imgs/close_button_black.png">
-        </div>
-        <div class="info_info_overlay">
-            <h3>${mySpecials[indexSpecial].name}</h3>
-            <p>${mySpecials[indexSpecial].info}</p>
-            <h4>Allergens</h4>
-            <ul>
-                ${mySpecials[indexSpecial].alergens.map(alergen => `<li>${alergen}</li>`).join('')}
-            </ul>
-                <h4>Additives</h4>
-            <ul>
-                ${mySpecials[indexSpecial].Additives.map(additive => `<li>${additive}</li>`).join('')}
-            </ul>
-        </div>
-    </div>
-    `
 }
 
 function closeInfoOverlay() {
