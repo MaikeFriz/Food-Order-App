@@ -28,7 +28,7 @@ function renderOrdersInBasketOverlay(){
     basket.innerHTML = '';
   
     if (myBasket.length === 0) {
-      subtotalDiv.innerHTML = '<p>0.00 €</p>';
+      subtotalDiv.innerHTML = ' ';
       basket.innerHTML = `
         <div class="message_basket_empty">
           <span class="material-symbols-outlined">shopping_basket</span>
